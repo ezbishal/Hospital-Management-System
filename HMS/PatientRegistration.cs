@@ -50,6 +50,12 @@ namespace HMS
 
         }
 
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
         private void PatientRegistration_Load(object sender, EventArgs e)
         {
             Hashtable ht = new Hashtable();
@@ -61,7 +67,7 @@ namespace HMS
             bool check = false;
             try
             {
-                SqlCommand cmd = new SqlCommand("st_CheckPatientRegistration", MainClass.con);
+                SqlCommand cmd = new SqlCommand("st_checkPatientRegistrationExists", MainClass.con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@phone", phone);
                 MainClass.con.Open();
@@ -120,92 +126,7 @@ namespace HMS
                 MainClass.showMessage("Fields with RED are mandatory!", "error");
             }
             else
-            {
-                using(TransactionScope sc = new TransactionScope())
-                {
-                    if (edit == 0) // Code for save
-                    {
-                        if (get_checkPatientRecord(phoneTxt.Text))
-                        {
-
-                        }
-                        else
-                        {
-                            Hashtable ht = new Hashtable();
-                            ht.Add("@name", patientTxt.Text);
-                            ht.Add("@guard", guardianTxt.Text);
-                            ht.Add("@phone", phoneTxt.Text);
-                            ht.Add("@age", ageTxt.Text);
-                            ht.Add("@id", patID);
-
-                            if (crud.insert_update_delete("st_updatePatientReg", ht) > 0)
-                            {
-                                Int64 patientID = patID;
-
-                                Hashtable htt = new Hashtable();
-                                htt.Add("@date", apptDT.Text);
-                                htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                                htt.Add("@patientID", patientID);
-                                htt.Add("@status", 0);
-
-                                if (crud.insert_update_delete("st_insertAppointment", htt) > 0)
-                                {
-                                    MainClass.showMessage(patientTxt.Text + " added successfully!", "success");
-                                    MainClass.resetDisable(leftPanel);
-                                    loadPatients();
-                                }
-
-
-                            }
-                            else
-                            {
-                                MainClass.showMessage("Unable to save record.", "error");
-                            }
-                        }
-
-                        
-                    }
-                    else if (edit == 1) //Code for update
-                    {
-                        Hashtable ht = new Hashtable();
-                        ht.Add("@name", patientTxt.Text);
-                        ht.Add("@guard", guardianTxt.Text);
-                        ht.Add("@phone", phoneTxt.Text);
-                        ht.Add("@age", ageTxt.Text);
-                        ht.Add("@id", patID);
-
-
-
-
-
-                        if (crud.insert_update_delete("st_updatePatientReg", ht) > 0)
-                        {
-                            //Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
-
-                            Hashtable htt = new Hashtable();
-                            ht.Add("@date", apptDT.Text);
-                            ht.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                            ht.Add("@patientID", patID);
-                            ht.Add("@status", 0);
-                            ht.Add("@id", appointmentID);
-
-
-                            if (crud.insert_update_delete("st_updateAppointment", htt) > 0)
-                            {
-                                MainClass.showMessage(patientTxt.Text + " updated successfully!", "success");
-                                MainClass.resetDisable(leftPanel);
-                                loadPatients();
-                            }
-
-
-                        }
-                        else
-                        {
-                            MainClass.showMessage("Unable to save record.", "error");
-                        }
-                    }
-                    sc.Complete();
-                }
+            { 
                 if (edit == 0) // Code for save
                 {
                     Hashtable ht = new Hashtable();
@@ -214,22 +135,18 @@ namespace HMS
                     ht.Add("@phone", phoneTxt.Text);
                     ht.Add("@age", ageTxt.Text);
 
-                    
-
-
                     if (crud.insert_update_delete("st_insertPatientReg", ht) > 0)
                     {
                         Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
 
                         Hashtable htt = new Hashtable();
-                        ht.Add("@date", apptDT.Text);
-                        ht.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                        ht.Add("@patientID", patientID);
-                        ht.Add("@status", 0);
-                        ht.Add("@day", apptDT.Value.Day);
-                        ht.Add("@month", apptDT.Value.Month);
-                        ht.Add("@year", apptDT.Value.Year);
-
+                        htt.Add("@date", apptDT.Value);
+                        htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
+                        htt.Add("@patientID", patientID);
+                        htt.Add("@status", 0);
+                        htt.Add("@day", apptDT.Value.Day);
+                        htt.Add("@month", apptDT.Value.Month);
+                        htt.Add("@year", apptDT.Value.Year);
 
                         if (crud.insert_update_delete("st_insertAppointment", htt) > 0)
                         {
@@ -254,20 +171,16 @@ namespace HMS
                     ht.Add("@age", ageTxt.Text);
                     ht.Add("@id", patID);
 
-
-
-
-
                     if (crud.insert_update_delete("st_updatePatientReg", ht) > 0)
                     {
                         //Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
 
                         Hashtable htt = new Hashtable();
-                        ht.Add("@date", apptDT.Text);
-                        ht.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                        ht.Add("@patientID", patID);
-                        ht.Add("@status", 0);
-                        ht.Add("@id", appointmentID);
+                        htt.Add("@date", apptDT.Text);
+                        htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
+                        htt.Add("@patientID", patID);
+                        htt.Add("@status", 0);
+                        htt.Add("@id", appointmentID);
 
 
                         if (crud.insert_update_delete("st_updateAppointment", htt) > 0)
@@ -309,7 +222,7 @@ namespace HMS
 
         public override void viewBtn_Click(object sender, EventArgs e)
         {
-
+            loadPatients();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -329,6 +242,11 @@ namespace HMS
                 ageTxt.Text = row.Cells["ageGV"].Value.ToString();
                 get_checkPatientRecord(phoneTxt.Text);
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -62,14 +62,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Size = new System.Drawing.Size(1019, 71);
+            this.panel2.Size = new System.Drawing.Size(289, 71);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Size = new System.Drawing.Size(1019, 714);
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(1019, 71);
             // 
             // left_panel
             // 
@@ -89,7 +93,8 @@
             this.leftPanel.Controls.Add(this.label4);
             this.leftPanel.Controls.Add(this.label9);
             this.leftPanel.Controls.Add(this.label8);
-            this.leftPanel.Size = new System.Drawing.Size(289, 785);
+            this.leftPanel.Size = new System.Drawing.Size(289, 771);
+            this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             this.leftPanel.Controls.SetChildIndex(this.label8, 0);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.label9, 0);
@@ -104,32 +109,46 @@
             this.leftPanel.Controls.SetChildIndex(this.passTxt, 0);
             this.leftPanel.Controls.SetChildIndex(this.rolesDD, 0);
             // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            // 
             // usernamePanel
             // 
             this.usernamePanel.Size = new System.Drawing.Size(1019, 66);
             // 
             // right_panel
             // 
+            this.right_panel.Location = new System.Drawing.Point(289, 0);
             this.right_panel.Size = new System.Drawing.Size(1019, 851);
             // 
             // rightPanel
             // 
+            this.rightPanel.Location = new System.Drawing.Point(0, 66);
             this.rightPanel.Size = new System.Drawing.Size(1019, 785);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(165, 0);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // nameTxt
             // 
-            this.nameTxt.Location = new System.Drawing.Point(34, 114);
+            this.nameTxt.Location = new System.Drawing.Point(18, 187);
             this.nameTxt.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.nameTxt.MaxLength = 50;
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(223, 27);
+            this.nameTxt.Size = new System.Drawing.Size(247, 27);
             this.nameTxt.TabIndex = 4;
             this.nameTxt.TextChanged += new System.EventHandler(this.roleTxt_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 94);
+            this.label4.Location = new System.Drawing.Point(14, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 3;
@@ -139,7 +158,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 153);
+            this.label5.Location = new System.Drawing.Point(14, 224);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 5;
@@ -148,7 +167,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 259);
+            this.label8.Location = new System.Drawing.Point(14, 334);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 11;
@@ -157,7 +176,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 215);
+            this.label9.Location = new System.Drawing.Point(14, 276);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 20);
             this.label9.TabIndex = 13;
@@ -171,7 +190,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -190,20 +209,20 @@
             this.RoleGV});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1013, 688);
+            this.dataGridView1.Size = new System.Drawing.Size(1013, 681);
             this.dataGridView1.TabIndex = 0;
             // 
             // snoGV
@@ -213,7 +232,7 @@
             this.snoGV.MinimumWidth = 6;
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
-            this.snoGV.Width = 47;
+            this.snoGV.Width = 53;
             // 
             // userIDGV
             // 
@@ -275,26 +294,26 @@
             // 
             // usernameTxt
             // 
-            this.usernameTxt.Location = new System.Drawing.Point(34, 188);
+            this.usernameTxt.Location = new System.Drawing.Point(18, 244);
             this.usernameTxt.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.usernameTxt.MaxLength = 50;
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(223, 27);
+            this.usernameTxt.Size = new System.Drawing.Size(247, 27);
             this.usernameTxt.TabIndex = 14;
             // 
             // addressTxt
             // 
-            this.addressTxt.Location = new System.Drawing.Point(34, 289);
+            this.addressTxt.Location = new System.Drawing.Point(18, 354);
             this.addressTxt.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.addressTxt.MaxLength = 150;
             this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(223, 27);
+            this.addressTxt.Size = new System.Drawing.Size(247, 27);
             this.addressTxt.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 445);
+            this.label7.Location = new System.Drawing.Point(15, 445);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 20);
             this.label7.TabIndex = 16;
@@ -306,13 +325,13 @@
             this.phoneTxt.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.phoneTxt.MaxLength = 15;
             this.phoneTxt.Name = "phoneTxt";
-            this.phoneTxt.Size = new System.Drawing.Size(223, 27);
+            this.phoneTxt.Size = new System.Drawing.Size(247, 27);
             this.phoneTxt.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(64, 348);
+            this.label6.Location = new System.Drawing.Point(15, 391);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 20);
             this.label6.TabIndex = 18;
@@ -320,20 +339,20 @@
             // 
             // passTxt
             // 
-            this.passTxt.Location = new System.Drawing.Point(33, 379);
+            this.passTxt.Location = new System.Drawing.Point(18, 411);
             this.passTxt.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.passTxt.MaxLength = 50;
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(223, 27);
+            this.passTxt.Size = new System.Drawing.Size(247, 27);
             this.passTxt.TabIndex = 19;
             this.passTxt.UseSystemPasswordChar = true;
             // 
             // rolesDD
             // 
             this.rolesDD.FormattingEnabled = true;
-            this.rolesDD.Location = new System.Drawing.Point(33, 238);
+            this.rolesDD.Location = new System.Drawing.Point(18, 299);
             this.rolesDD.Name = "rolesDD";
-            this.rolesDD.Size = new System.Drawing.Size(223, 28);
+            this.rolesDD.Size = new System.Drawing.Size(247, 28);
             this.rolesDD.TabIndex = 20;
             // 
             // UserWindow

@@ -59,11 +59,11 @@
     <Compile Include="DiseaseWindow.Designer.cs">
       <DependentUpon>DiseaseWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeScreen.cs">
+    <Compile Include="AdminHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeScreen.Designer.cs">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <Compile Include="AdminHomeScreen.Designer.cs">
+      <DependentUpon>AdminHomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
@@ -127,6 +127,12 @@
     <Compile Include="SymptomsWindow.Designer.cs">
       <DependentUpon>SymptomsWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestWindow.Designer.cs">
+      <DependentUpon>TestWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="TurnWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +151,8 @@
     <EmbeddedResource Include="DiseaseWindow.resx">
       <DependentUpon>DiseaseWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeScreen.resx">
-      <DependentUpon>HomeScreen.cs</DependentUpon>
+    <EmbeddedResource Include="AdminHomeScreen.resx">
+      <DependentUpon>AdminHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
@@ -188,6 +194,9 @@
     <EmbeddedResource Include="SymptomsWindow.resx">
       <DependentUpon>SymptomsWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TestWindow.resx">
+      <DependentUpon>TestWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TurnWindow.resx">
       <DependentUpon>TurnWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +236,9 @@
       <Project>{178c684e-ab45-458e-ae85-bdda02b9498a}</Project>
       <Name>Settings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\roles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

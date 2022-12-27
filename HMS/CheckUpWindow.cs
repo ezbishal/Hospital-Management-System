@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Classes;
 using CRUD;
 
 namespace HMS
@@ -48,6 +49,27 @@ namespace HMS
             ht.Add("@year", dateTimePicker1.Value.Year);
             ht.Add("@patID", Convert.ToInt64(patientDD.SelectedValue.ToString()));
             turnNo = crud.getTurnNumber("st_getTurnNumberWRTpatientWRTToday", ht);
+        }
+
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
+        private void listBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

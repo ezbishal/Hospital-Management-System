@@ -50,14 +50,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Size = new System.Drawing.Size(511, 71);
+            this.panel2.Size = new System.Drawing.Size(289, 71);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Size = new System.Drawing.Size(511, 313);
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(511, 71);
             // 
             // left_panel
             // 
@@ -69,12 +73,16 @@
             this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.symptomTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 384);
+            this.leftPanel.Size = new System.Drawing.Size(289, 370);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.symptomTxt, 0);
             this.leftPanel.Controls.SetChildIndex(this.label5, 0);
             this.leftPanel.Controls.SetChildIndex(this.diseaseDD, 0);
+            // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
             // 
             // usernamePanel
             // 
@@ -82,11 +90,21 @@
             // 
             // right_panel
             // 
+            this.right_panel.Location = new System.Drawing.Point(289, 0);
             this.right_panel.Size = new System.Drawing.Size(511, 450);
             // 
             // rightPanel
             // 
+            this.rightPanel.Location = new System.Drawing.Point(0, 66);
             this.rightPanel.Size = new System.Drawing.Size(511, 384);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(165, 0);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // label4
             // 
@@ -101,13 +119,13 @@
             // 
             this.symptomTxt.Location = new System.Drawing.Point(12, 127);
             this.symptomTxt.Name = "symptomTxt";
-            this.symptomTxt.Size = new System.Drawing.Size(251, 27);
+            this.symptomTxt.Size = new System.Drawing.Size(260, 27);
             this.symptomTxt.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 191);
+            this.label5.Location = new System.Drawing.Point(12, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 3;
@@ -118,9 +136,9 @@
             // 
             this.diseaseDD.Enabled = false;
             this.diseaseDD.FormattingEnabled = true;
-            this.diseaseDD.Location = new System.Drawing.Point(12, 214);
+            this.diseaseDD.Location = new System.Drawing.Point(12, 200);
             this.diseaseDD.Name = "diseaseDD";
-            this.diseaseDD.Size = new System.Drawing.Size(251, 28);
+            this.diseaseDD.Size = new System.Drawing.Size(260, 28);
             this.diseaseDD.TabIndex = 4;
             // 
             // dataGridView1
@@ -131,7 +149,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -146,20 +164,20 @@
             this.diseaseGV});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(505, 280);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -170,7 +188,7 @@
             this.snoGV.MinimumWidth = 6;
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
-            this.snoGV.Width = 47;
+            this.snoGV.Width = 53;
             // 
             // sympIDGV
             // 

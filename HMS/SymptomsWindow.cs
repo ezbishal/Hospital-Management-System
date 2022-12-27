@@ -25,6 +25,12 @@ namespace HMS
 
         }
 
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
         private void SymptomsWindow_Load(object sender, EventArgs e)
         {
             Hashtable ht = new Hashtable();

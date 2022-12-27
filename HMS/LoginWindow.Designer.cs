@@ -53,22 +53,31 @@
             this.leftPanel.Controls.Add(this.label3);
             this.leftPanel.Size = new System.Drawing.Size(289, 726);
             // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 66);
+            // 
             // usernamePanel
             // 
             this.usernamePanel.Size = new System.Drawing.Size(717, 66);
             // 
             // right_panel
             // 
+            this.right_panel.Location = new System.Drawing.Point(289, 0);
             this.right_panel.Size = new System.Drawing.Size(717, 792);
             // 
             // rightPanel
             // 
             this.rightPanel.Size = new System.Drawing.Size(717, 726);
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(165, 0);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 348);
+            this.label3.Location = new System.Drawing.Point(3, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 0;
@@ -76,19 +85,19 @@
             // 
             // userTxt
             // 
-            this.userTxt.Location = new System.Drawing.Point(12, 381);
+            this.userTxt.Location = new System.Drawing.Point(8, 381);
             this.userTxt.MaxLength = 50;
             this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(207, 27);
+            this.userTxt.Size = new System.Drawing.Size(260, 27);
             this.userTxt.TabIndex = 1;
             this.userTxt.TextChanged += new System.EventHandler(this.userTxt_TextChanged);
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(12, 449);
+            this.passwordTxt.Location = new System.Drawing.Point(8, 449);
             this.passwordTxt.MaxLength = 50;
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(207, 27);
+            this.passwordTxt.Size = new System.Drawing.Size(260, 27);
             this.passwordTxt.TabIndex = 3;
             this.passwordTxt.UseSystemPasswordChar = true;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
@@ -96,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 416);
+            this.label4.Location = new System.Drawing.Point(4, 426);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 2;
@@ -106,9 +115,9 @@
             // 
             this.loginBtn.FlatAppearance.BorderSize = 2;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Location = new System.Drawing.Point(16, 494);
+            this.loginBtn.Location = new System.Drawing.Point(8, 494);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(203, 40);
+            this.loginBtn.Size = new System.Drawing.Size(260, 40);
             this.loginBtn.TabIndex = 0;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;

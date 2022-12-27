@@ -34,7 +34,7 @@ namespace HMS
 
                 if(login.getLoginDetails("st_getAuthDetails", ht))
                 {
-                    HomeScreen hm = new HomeScreen();
+                    AdminHomeScreen hm = new AdminHomeScreen();
                     MainClass.showWindow(hm, this, MDI.ActiveForm);
                 }
                 else

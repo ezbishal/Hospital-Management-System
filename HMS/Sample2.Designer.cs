@@ -30,16 +30,16 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchTxt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.editBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.deleteBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.searchTxt = new System.Windows.Forms.TextBox();
             this.viewBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.left_panel.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.backBtnPanel.SuspendLayout();
@@ -52,39 +52,52 @@
             // 
             // left_panel
             // 
-            this.left_panel.Size = new System.Drawing.Size(289, 816);
+            this.left_panel.Size = new System.Drawing.Size(369, 816);
             // 
             // leftPanel
             // 
             this.leftPanel.Controls.Add(this.panel2);
-            this.leftPanel.Size = new System.Drawing.Size(289, 750);
+            this.leftPanel.Location = new System.Drawing.Point(0, 80);
+            this.leftPanel.Size = new System.Drawing.Size(369, 736);
             // 
             // backBtnPanel
             // 
             this.backBtnPanel.Controls.Add(this.backBtn);
+            this.backBtnPanel.Size = new System.Drawing.Size(369, 80);
             this.backBtnPanel.Controls.SetChildIndex(this.label1, 0);
             this.backBtnPanel.Controls.SetChildIndex(this.backBtn, 0);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(994, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(914, 80);
             // 
             // right_panel
             // 
-            this.right_panel.Size = new System.Drawing.Size(994, 816);
+            this.right_panel.Location = new System.Drawing.Point(369, 0);
+            this.right_panel.Size = new System.Drawing.Size(914, 816);
             // 
             // rightPanel
             // 
             this.rightPanel.Controls.Add(this.groupBox1);
             this.rightPanel.Controls.Add(this.panel1);
-            this.rightPanel.Size = new System.Drawing.Size(994, 750);
+            this.rightPanel.Location = new System.Drawing.Point(0, 80);
+            this.rightPanel.Size = new System.Drawing.Size(914, 736);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(245, 0);
+            this.label1.Size = new System.Drawing.Size(124, 80);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(609, 80);
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 71);
+            this.panel2.Size = new System.Drawing.Size(369, 71);
             this.panel2.TabIndex = 0;
             // 
             // groupBox1
@@ -93,21 +106,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(994, 679);
+            this.groupBox1.Size = new System.Drawing.Size(914, 665);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
-            // 
-            // backBtn
-            // 
-            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.backBtn.Location = new System.Drawing.Point(12, 12);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(70, 42);
-            this.backBtn.TabIndex = 1;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -115,83 +117,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 71);
+            this.panel1.Size = new System.Drawing.Size(914, 71);
             this.panel1.TabIndex = 0;
-            // 
-            // searchTxt
-            // 
-            this.searchTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchTxt.Location = new System.Drawing.Point(828, 38);
-            this.searchTxt.Name = "searchTxt";
-            this.searchTxt.Size = new System.Drawing.Size(163, 27);
-            this.searchTxt.TabIndex = 5;
-            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(828, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 35);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Search";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addBtn.FlatAppearance.BorderSize = 2;
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Location = new System.Drawing.Point(3, 3);
-            this.addBtn.Name = "addBtn";
-            this.tableLayoutPanel1.SetRowSpan(this.addBtn, 2);
-            this.addBtn.Size = new System.Drawing.Size(159, 65);
-            this.addBtn.TabIndex = 0;
-            this.addBtn.Text = "&ADD";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // editBtn
-            // 
-            this.editBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.editBtn.FlatAppearance.BorderSize = 2;
-            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editBtn.Location = new System.Drawing.Point(168, 3);
-            this.editBtn.Name = "editBtn";
-            this.tableLayoutPanel1.SetRowSpan(this.editBtn, 2);
-            this.editBtn.Size = new System.Drawing.Size(159, 65);
-            this.editBtn.TabIndex = 1;
-            this.editBtn.Text = "&EDIT";
-            this.editBtn.UseVisualStyleBackColor = true;
-            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveBtn.FlatAppearance.BorderSize = 2;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Location = new System.Drawing.Point(333, 3);
-            this.saveBtn.Name = "saveBtn";
-            this.tableLayoutPanel1.SetRowSpan(this.saveBtn, 2);
-            this.saveBtn.Size = new System.Drawing.Size(159, 65);
-            this.saveBtn.TabIndex = 2;
-            this.saveBtn.Text = "&SAVE";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.deleteBtn.FlatAppearance.BorderSize = 2;
-            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Location = new System.Drawing.Point(498, 3);
-            this.deleteBtn.Name = "deleteBtn";
-            this.tableLayoutPanel1.SetRowSpan(this.deleteBtn, 2);
-            this.deleteBtn.Size = new System.Drawing.Size(159, 65);
-            this.deleteBtn.TabIndex = 3;
-            this.deleteBtn.Text = "&DELETE";
-            this.deleteBtn.UseVisualStyleBackColor = true;
-            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -215,22 +142,109 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(994, 71);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 71);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.deleteBtn.FlatAppearance.BorderSize = 2;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Location = new System.Drawing.Point(459, 3);
+            this.deleteBtn.Name = "deleteBtn";
+            this.tableLayoutPanel1.SetRowSpan(this.deleteBtn, 2);
+            this.deleteBtn.Size = new System.Drawing.Size(146, 65);
+            this.deleteBtn.TabIndex = 3;
+            this.deleteBtn.Text = "&DELETE";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveBtn.FlatAppearance.BorderSize = 2;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Location = new System.Drawing.Point(307, 3);
+            this.saveBtn.Name = "saveBtn";
+            this.tableLayoutPanel1.SetRowSpan(this.saveBtn, 2);
+            this.saveBtn.Size = new System.Drawing.Size(146, 65);
+            this.saveBtn.TabIndex = 2;
+            this.saveBtn.Text = "&SAVE";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // editBtn
+            // 
+            this.editBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editBtn.FlatAppearance.BorderSize = 2;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.Location = new System.Drawing.Point(155, 3);
+            this.editBtn.Name = "editBtn";
+            this.tableLayoutPanel1.SetRowSpan(this.editBtn, 2);
+            this.editBtn.Size = new System.Drawing.Size(146, 65);
+            this.editBtn.TabIndex = 1;
+            this.editBtn.Text = "&EDIT";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addBtn.FlatAppearance.BorderSize = 2;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Location = new System.Drawing.Point(3, 3);
+            this.addBtn.Name = "addBtn";
+            this.tableLayoutPanel1.SetRowSpan(this.addBtn, 2);
+            this.addBtn.Size = new System.Drawing.Size(146, 65);
+            this.addBtn.TabIndex = 0;
+            this.addBtn.Text = "&ADD";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(763, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 35);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Search";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // searchTxt
+            // 
+            this.searchTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTxt.Location = new System.Drawing.Point(763, 38);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(148, 27);
+            this.searchTxt.TabIndex = 5;
+            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
             // viewBtn
             // 
             this.viewBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewBtn.FlatAppearance.BorderSize = 2;
             this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewBtn.Location = new System.Drawing.Point(663, 3);
+            this.viewBtn.Location = new System.Drawing.Point(611, 3);
             this.viewBtn.Name = "viewBtn";
             this.tableLayoutPanel1.SetRowSpan(this.viewBtn, 2);
-            this.viewBtn.Size = new System.Drawing.Size(159, 65);
+            this.viewBtn.Size = new System.Drawing.Size(146, 65);
             this.viewBtn.TabIndex = 6;
             this.viewBtn.Text = "&VIEW";
             this.viewBtn.UseVisualStyleBackColor = true;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.ForeColor = System.Drawing.Color.SteelBlue;
+            this.backBtn.Image = global::HMS.Properties.Resources.backBtn;
+            this.backBtn.Location = new System.Drawing.Point(12, 3);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(61, 51);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // Sample2
             // 

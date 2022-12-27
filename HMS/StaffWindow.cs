@@ -158,6 +158,23 @@ namespace HMS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
+        private void StaffWindow_Load(object sender, EventArgs e)
+        {
+            Hashtable ht = new Hashtable();
+            crud.loadList("st_getRoles", roleDD, "ID", "Role", ht);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             if (e.RowIndex != -1 && e.ColumnIndex != -1)
             {
                 edit = 1;
@@ -166,18 +183,12 @@ namespace HMS
                 userID = Convert.ToInt32(row.Cells["userIDGV"].Value.ToString());
                 nameTxt.Text = row.Cells["nameGV"].Value.ToString();
                 nameTxt.Text = row.Cells["usernameGV"].Value.ToString();
-                nameTxt.Text = row.Cells["passwordGV"].Value.ToString();
+                nameTxt.Text = row.Cells["passGV"].Value.ToString();
                 nameTxt.Text = row.Cells["phoneGV"].Value.ToString();
                 nameTxt.Text = row.Cells["addressGV"].Value.ToString();
                 roleDD.SelectedValue = row.Cells["roleIDGV"].Value;
 
             }
-        }
-
-        private void StaffWindow_Load(object sender, EventArgs e)
-        {
-            Hashtable ht = new Hashtable();
-            crud.loadList("st_getRoles", roleDD, "ID", "Role", ht);
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.phoneTxt = new System.Windows.Forms.TextBox();
             this.patientTxt = new System.Windows.Forms.TextBox();
@@ -72,18 +72,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // panel2
+            // 
+            this.panel2.Size = new System.Drawing.Size(289, 71);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(511, 595);
+            this.groupBox1.Size = new System.Drawing.Size(652, 683);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(511, 71);
+            this.panel1.Size = new System.Drawing.Size(652, 71);
             // 
             // left_panel
             // 
-            this.left_panel.Size = new System.Drawing.Size(289, 732);
+            this.left_panel.Size = new System.Drawing.Size(289, 820);
             // 
             // leftPanel
             // 
@@ -106,7 +110,7 @@
             this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.phoneTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 666);
+            this.leftPanel.Size = new System.Drawing.Size(289, 740);
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
@@ -129,23 +133,37 @@
             this.leftPanel.Controls.SetChildIndex(this.label13, 0);
             this.leftPanel.Controls.SetChildIndex(this.ageTxt, 0);
             // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(511, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(652, 66);
             // 
             // right_panel
             // 
-            this.right_panel.Size = new System.Drawing.Size(511, 732);
+            this.right_panel.Location = new System.Drawing.Point(289, 0);
+            this.right_panel.Size = new System.Drawing.Size(652, 820);
             // 
             // rightPanel
             // 
-            this.rightPanel.Size = new System.Drawing.Size(511, 666);
+            this.rightPanel.Location = new System.Drawing.Point(0, 66);
+            this.rightPanel.Size = new System.Drawing.Size(652, 754);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(165, 0);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(8, 80);
+            this.label4.Location = new System.Drawing.Point(8, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 1;
@@ -154,24 +172,24 @@
             // phoneTxt
             // 
             this.phoneTxt.Enabled = false;
-            this.phoneTxt.Location = new System.Drawing.Point(12, 114);
+            this.phoneTxt.Location = new System.Drawing.Point(12, 123);
             this.phoneTxt.Name = "phoneTxt";
-            this.phoneTxt.Size = new System.Drawing.Size(232, 27);
+            this.phoneTxt.Size = new System.Drawing.Size(258, 27);
             this.phoneTxt.TabIndex = 0;
             // 
             // patientTxt
             // 
             this.patientTxt.Enabled = false;
-            this.patientTxt.Location = new System.Drawing.Point(12, 167);
+            this.patientTxt.Location = new System.Drawing.Point(12, 176);
             this.patientTxt.Name = "patientTxt";
-            this.patientTxt.Size = new System.Drawing.Size(232, 27);
+            this.patientTxt.Size = new System.Drawing.Size(258, 27);
             this.patientTxt.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
-            this.label5.Location = new System.Drawing.Point(12, 144);
+            this.label5.Location = new System.Drawing.Point(8, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 3;
@@ -182,14 +200,14 @@
             this.guardianTxt.Enabled = false;
             this.guardianTxt.Location = new System.Drawing.Point(12, 229);
             this.guardianTxt.Name = "guardianTxt";
-            this.guardianTxt.Size = new System.Drawing.Size(232, 27);
+            this.guardianTxt.Size = new System.Drawing.Size(258, 27);
             this.guardianTxt.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
-            this.label6.Location = new System.Drawing.Point(8, 197);
+            this.label6.Location = new System.Drawing.Point(8, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 20);
             this.label6.TabIndex = 5;
@@ -200,7 +218,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
-            this.label7.Location = new System.Drawing.Point(13, 390);
+            this.label7.Location = new System.Drawing.Point(8, 389);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 20);
             this.label7.TabIndex = 7;
@@ -210,9 +228,9 @@
             // 
             this.consultedToTxt.AllowDrop = true;
             this.consultedToTxt.Enabled = false;
-            this.consultedToTxt.Location = new System.Drawing.Point(16, 565);
+            this.consultedToTxt.Location = new System.Drawing.Point(11, 621);
             this.consultedToTxt.Name = "consultedToTxt";
-            this.consultedToTxt.Size = new System.Drawing.Size(232, 27);
+            this.consultedToTxt.Size = new System.Drawing.Size(259, 27);
             this.consultedToTxt.TabIndex = 10;
             this.consultedToTxt.TabStop = false;
             // 
@@ -221,7 +239,7 @@
             this.label8.AllowDrop = true;
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(12, 542);
+            this.label8.Location = new System.Drawing.Point(8, 598);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 20);
             this.label8.TabIndex = 9;
@@ -231,9 +249,9 @@
             // 
             this.statusTxt.AllowDrop = true;
             this.statusTxt.Enabled = false;
-            this.statusTxt.Location = new System.Drawing.Point(16, 618);
+            this.statusTxt.Location = new System.Drawing.Point(11, 674);
             this.statusTxt.Name = "statusTxt";
-            this.statusTxt.Size = new System.Drawing.Size(232, 27);
+            this.statusTxt.Size = new System.Drawing.Size(259, 27);
             this.statusTxt.TabIndex = 12;
             this.statusTxt.TabStop = false;
             // 
@@ -241,26 +259,27 @@
             // 
             this.label9.AllowDrop = true;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 595);
+            this.label9.Location = new System.Drawing.Point(8, 651);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 20);
             this.label9.TabIndex = 11;
             this.label9.Text = "Status";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // apptDT
             // 
             this.apptDT.Enabled = false;
-            this.apptDT.Location = new System.Drawing.Point(17, 359);
+            this.apptDT.Location = new System.Drawing.Point(12, 349);
             this.apptDT.Name = "apptDT";
             this.apptDT.ShowUpDown = true;
-            this.apptDT.Size = new System.Drawing.Size(232, 27);
+            this.apptDT.Size = new System.Drawing.Size(258, 27);
             this.apptDT.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Enabled = false;
-            this.label10.Location = new System.Drawing.Point(17, 329);
+            this.label10.Location = new System.Drawing.Point(8, 326);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 20);
             this.label10.TabIndex = 15;
@@ -270,9 +289,9 @@
             // 
             this.lastApptDT.AllowDrop = true;
             this.lastApptDT.Enabled = false;
-            this.lastApptDT.Location = new System.Drawing.Point(12, 508);
+            this.lastApptDT.Location = new System.Drawing.Point(11, 564);
             this.lastApptDT.Name = "lastApptDT";
-            this.lastApptDT.Size = new System.Drawing.Size(232, 27);
+            this.lastApptDT.Size = new System.Drawing.Size(259, 27);
             this.lastApptDT.TabIndex = 18;
             this.lastApptDT.TabStop = false;
             // 
@@ -281,7 +300,7 @@
             this.label11.AllowDrop = true;
             this.label11.AutoSize = true;
             this.label11.Enabled = false;
-            this.label11.Location = new System.Drawing.Point(12, 478);
+            this.label11.Location = new System.Drawing.Point(7, 541);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(163, 20);
             this.label11.TabIndex = 17;
@@ -291,35 +310,36 @@
             // 
             this.apptForDD.Enabled = false;
             this.apptForDD.FormattingEnabled = true;
-            this.apptForDD.Location = new System.Drawing.Point(13, 413);
+            this.apptForDD.Location = new System.Drawing.Point(12, 412);
             this.apptForDD.Name = "apptForDD";
-            this.apptForDD.Size = new System.Drawing.Size(232, 28);
+            this.apptForDD.Size = new System.Drawing.Size(258, 28);
             this.apptForDD.TabIndex = 5;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Enabled = false;
-            this.label12.Location = new System.Drawing.Point(55, 447);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(55, 492);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 20);
+            this.label12.Size = new System.Drawing.Size(156, 28);
             this.label12.TabIndex = 20;
             this.label12.Text = "Patient History";
             // 
             // ageTxt
             // 
             this.ageTxt.Enabled = false;
-            this.ageTxt.Location = new System.Drawing.Point(17, 301);
+            this.ageTxt.Location = new System.Drawing.Point(11, 285);
             this.ageTxt.MaxLength = 3;
             this.ageTxt.Name = "ageTxt";
-            this.ageTxt.Size = new System.Drawing.Size(232, 27);
+            this.ageTxt.Size = new System.Drawing.Size(259, 27);
             this.ageTxt.TabIndex = 3;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Enabled = false;
-            this.label13.Location = new System.Drawing.Point(13, 269);
+            this.label13.Location = new System.Drawing.Point(8, 262);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 20);
             this.label13.TabIndex = 21;
@@ -331,14 +351,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.snoGV,
@@ -353,14 +373,14 @@
             this.doctorIDGV,
             this.apptIDGV,
             this.statusGV});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 30);
             this.dataGridView1.Name = "dataGridView1";
@@ -368,7 +388,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 562);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 650);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -465,7 +485,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 732);
+            this.ClientSize = new System.Drawing.Size(941, 820);
             this.Name = "PatientRegistration";
             this.Text = "PatientRegistration";
             this.Load += new System.EventHandler(this.PatientRegistration_Load);

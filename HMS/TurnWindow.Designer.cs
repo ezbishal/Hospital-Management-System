@@ -42,26 +42,35 @@
             // 
             // left_panel
             // 
-            this.left_panel.Size = new System.Drawing.Size(350, 450);
+            this.left_panel.Size = new System.Drawing.Size(350, 654);
             // 
             // leftPanel
             // 
-            this.leftPanel.Size = new System.Drawing.Size(350, 384);
+            this.leftPanel.Size = new System.Drawing.Size(350, 588);
+            // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(350, 66);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(450, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(593, 66);
             // 
             // right_panel
             // 
-            this.right_panel.Size = new System.Drawing.Size(450, 450);
+            this.right_panel.Location = new System.Drawing.Point(350, 0);
+            this.right_panel.Size = new System.Drawing.Size(593, 654);
             // 
             // rightPanel
             // 
             this.rightPanel.Controls.Add(this.turnLabel);
             this.rightPanel.Controls.Add(this.label4);
             this.rightPanel.Controls.Add(this.label3);
-            this.rightPanel.Size = new System.Drawing.Size(450, 384);
+            this.rightPanel.Size = new System.Drawing.Size(593, 588);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(226, 0);
             // 
             // label3
             // 
@@ -84,11 +93,12 @@
             // turnLabel
             // 
             this.turnLabel.AutoSize = true;
+            this.turnLabel.Font = new System.Drawing.Font("Segoe UI", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.turnLabel.Location = new System.Drawing.Point(187, 195);
             this.turnLabel.Name = "turnLabel";
-            this.turnLabel.Size = new System.Drawing.Size(36, 20);
+            this.turnLabel.Size = new System.Drawing.Size(189, 221);
             this.turnLabel.TabIndex = 2;
-            this.turnLabel.Text = "Null";
+            this.turnLabel.Text = "0";
             // 
             // timer1
             // 
@@ -99,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(943, 654);
             this.Name = "TurnWindow";
             this.Text = "TurnWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TurnWindow_FormClosing);

@@ -20,6 +20,12 @@ namespace HMS
             InitializeComponent();
         }
 
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
         private void DiseaseWindow_Load(object sender, EventArgs e)
         {
 

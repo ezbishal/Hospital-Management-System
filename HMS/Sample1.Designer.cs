@@ -51,26 +51,28 @@
             this.left_panel.ForeColor = System.Drawing.Color.White;
             this.left_panel.Location = new System.Drawing.Point(0, 0);
             this.left_panel.Name = "left_panel";
-            this.left_panel.Size = new System.Drawing.Size(350, 745);
+            this.left_panel.Size = new System.Drawing.Size(369, 745);
             this.left_panel.TabIndex = 0;
             // 
             // leftPanel
             // 
+            this.leftPanel.BackColor = System.Drawing.Color.SteelBlue;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftPanel.ForeColor = System.Drawing.Color.White;
             this.leftPanel.Location = new System.Drawing.Point(0, 66);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(350, 679);
+            this.leftPanel.Size = new System.Drawing.Size(369, 679);
             this.leftPanel.TabIndex = 1;
             // 
             // backBtnPanel
             // 
+            this.backBtnPanel.BackColor = System.Drawing.Color.SteelBlue;
             this.backBtnPanel.Controls.Add(this.label1);
             this.backBtnPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.backBtnPanel.ForeColor = System.Drawing.Color.White;
             this.backBtnPanel.Location = new System.Drawing.Point(0, 0);
             this.backBtnPanel.Name = "backBtnPanel";
-            this.backBtnPanel.Size = new System.Drawing.Size(350, 66);
+            this.backBtnPanel.Size = new System.Drawing.Size(369, 66);
             this.backBtnPanel.TabIndex = 1;
             // 
             // label1
@@ -78,7 +80,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(226, 0);
+            this.label1.Location = new System.Drawing.Point(245, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 66);
             this.label1.TabIndex = 0;
@@ -90,9 +92,10 @@
             // 
             this.usernamePanel.Controls.Add(this.label2);
             this.usernamePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usernamePanel.ForeColor = System.Drawing.Color.SteelBlue;
             this.usernamePanel.Location = new System.Drawing.Point(0, 0);
             this.usernamePanel.Name = "usernamePanel";
-            this.usernamePanel.Size = new System.Drawing.Size(825, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(806, 66);
             this.usernamePanel.TabIndex = 1;
             // 
             // label2
@@ -113,17 +116,18 @@
             this.right_panel.Controls.Add(this.usernamePanel);
             this.right_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.right_panel.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.right_panel.Location = new System.Drawing.Point(350, 0);
+            this.right_panel.Location = new System.Drawing.Point(369, 0);
             this.right_panel.Name = "right_panel";
-            this.right_panel.Size = new System.Drawing.Size(825, 745);
+            this.right_panel.Size = new System.Drawing.Size(806, 745);
             this.right_panel.TabIndex = 1;
             // 
             // rightPanel
             // 
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightPanel.ForeColor = System.Drawing.Color.SteelBlue;
             this.rightPanel.Location = new System.Drawing.Point(0, 66);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(825, 679);
+            this.rightPanel.Size = new System.Drawing.Size(806, 679);
             this.rightPanel.TabIndex = 2;
             this.rightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

@@ -62,14 +62,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Size = new System.Drawing.Size(808, 71);
+            this.panel2.Size = new System.Drawing.Size(289, 71);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Size = new System.Drawing.Size(808, 635);
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(808, 71);
             // 
             // left_panel
             // 
@@ -89,7 +93,7 @@
             this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.nameTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 706);
+            this.leftPanel.Size = new System.Drawing.Size(289, 692);
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.nameTxt, 0);
@@ -105,17 +109,31 @@
             this.leftPanel.Controls.SetChildIndex(this.label9, 0);
             this.leftPanel.Controls.SetChildIndex(this.roleDD, 0);
             // 
+            // backBtnPanel
+            // 
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            // 
             // usernamePanel
             // 
             this.usernamePanel.Size = new System.Drawing.Size(808, 66);
             // 
             // right_panel
             // 
+            this.right_panel.Location = new System.Drawing.Point(289, 0);
             this.right_panel.Size = new System.Drawing.Size(808, 772);
             // 
             // rightPanel
             // 
+            this.rightPanel.Location = new System.Drawing.Point(0, 66);
             this.rightPanel.Size = new System.Drawing.Size(808, 706);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(165, 0);
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // label4
             // 
@@ -132,7 +150,7 @@
             this.nameTxt.Location = new System.Drawing.Point(18, 182);
             this.nameTxt.MaxLength = 50;
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(232, 27);
+            this.nameTxt.Size = new System.Drawing.Size(256, 27);
             this.nameTxt.TabIndex = 2;
             this.nameTxt.TextChanged += new System.EventHandler(this.nameTxt_TextChanged);
             // 
@@ -142,7 +160,7 @@
             this.userTxt.Location = new System.Drawing.Point(18, 245);
             this.userTxt.MaxLength = 50;
             this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(232, 27);
+            this.userTxt.Size = new System.Drawing.Size(256, 27);
             this.userTxt.TabIndex = 4;
             this.userTxt.TextChanged += new System.EventHandler(this.userTxt_TextChanged);
             // 
@@ -161,7 +179,7 @@
             this.passwordTxt.Location = new System.Drawing.Point(18, 308);
             this.passwordTxt.MaxLength = 20;
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(232, 27);
+            this.passwordTxt.Size = new System.Drawing.Size(256, 27);
             this.passwordTxt.TabIndex = 6;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
@@ -180,7 +198,7 @@
             this.phoneTxt.Location = new System.Drawing.Point(18, 372);
             this.phoneTxt.MaxLength = 15;
             this.phoneTxt.Name = "phoneTxt";
-            this.phoneTxt.Size = new System.Drawing.Size(232, 27);
+            this.phoneTxt.Size = new System.Drawing.Size(256, 27);
             this.phoneTxt.TabIndex = 8;
             this.phoneTxt.TextChanged += new System.EventHandler(this.phoneTxt_TextChanged);
             // 
@@ -199,7 +217,7 @@
             this.addressTxt.Location = new System.Drawing.Point(18, 430);
             this.addressTxt.MaxLength = 200;
             this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(232, 27);
+            this.addressTxt.Size = new System.Drawing.Size(256, 27);
             this.addressTxt.TabIndex = 10;
             this.addressTxt.TextChanged += new System.EventHandler(this.addressTxt_TextChanged);
             // 
@@ -231,7 +249,7 @@
             this.roleDD.FormattingEnabled = true;
             this.roleDD.Location = new System.Drawing.Point(16, 492);
             this.roleDD.Name = "roleDD";
-            this.roleDD.Size = new System.Drawing.Size(234, 28);
+            this.roleDD.Size = new System.Drawing.Size(258, 28);
             this.roleDD.TabIndex = 12;
             this.roleDD.SelectedIndexChanged += new System.EventHandler(this.roleDD_SelectedIndexChanged);
             // 
@@ -243,7 +261,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -262,21 +280,22 @@
             this.RoleGV});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOliveGreen;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 609);
+            this.dataGridView1.Size = new System.Drawing.Size(802, 602);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // snoGV
@@ -286,7 +305,7 @@
             this.snoGV.MinimumWidth = 6;
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
-            this.snoGV.Width = 47;
+            this.snoGV.Width = 53;
             // 
             // roleIDGV
             // 

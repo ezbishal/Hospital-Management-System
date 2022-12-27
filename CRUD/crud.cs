@@ -43,6 +43,7 @@ namespace CRUD
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
                 da.Fill(dt);
                 for (int i = 0; i < lb.Items.Count; i++)
                 {
@@ -77,6 +78,7 @@ namespace CRUD
                 }
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataTable dt = new DataTable();
+                da.SelectCommand = cmd;
                 da.Fill(dt);
                 cb.DisplayMember = displayMember;
                 cb.ValueMember = valueMember;
