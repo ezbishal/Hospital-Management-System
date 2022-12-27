@@ -1,0 +1,9 @@
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\bin\Debug\Authentication.dll
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\bin\Debug\Authentication.pdb
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\bin\Debug\MainClass.dll
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\bin\Debug\MainClass.pdb
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\obj\Debug\Authentication.csproj.AssemblyReference.cache
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\obj\Debug\Authentication.csproj.CoreCompileInputs.cache
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\obj\Debug\Authentication.csproj.CopyComplete
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\obj\Debug\Authentication.dll
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\Authentication\obj\Debug\Authentication.pdb
