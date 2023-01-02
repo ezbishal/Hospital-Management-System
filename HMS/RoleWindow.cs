@@ -91,20 +91,9 @@ namespace HMS
 
         }
 
-        public override void searchTxt_TextChanged(object sender, EventArgs e)
-        {
-            if (roleTxt.Text == "") { roleTxt.BackColor = Color.Firebrick; } else { roleTxt.BackColor = Color.White; }
-        }
-
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
             loadRoles();
-        }
-
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,6 +111,11 @@ namespace HMS
                 roleID = Convert.ToInt32(row.Cells["roleIDGV"].Value.ToString());
                 roleTxt.Text = row.Cells["RoleGV"].Value.ToString();
             }
+        }
+
+        private void roleTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (roleTxt.Text == "") { roleTxt.BackColor = Color.Firebrick; } else { roleTxt.BackColor = Color.White; }
         }
     }
 }

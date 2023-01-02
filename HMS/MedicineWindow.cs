@@ -117,11 +117,13 @@ namespace HMS
                         loadMedicine();
                     }
                 }
+                edit = 0;
             }
+
 
         }
 
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
             loadMedicine();
         }
@@ -136,11 +138,6 @@ namespace HMS
             if(typeDD.SelectedIndex == -1) { typeDD.BackColor = Color.Firebrick; } else { typeDD.BackColor = Color.White; }
         }
 
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
-        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             

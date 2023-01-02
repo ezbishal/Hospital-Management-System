@@ -47,7 +47,7 @@
             // 
             // left_panel
             // 
-            this.left_panel.Size = new System.Drawing.Size(289, 687);
+            this.left_panel.Size = new System.Drawing.Size(289, 856);
             // 
             // leftPanel
             // 
@@ -61,7 +61,7 @@
             this.leftPanel.Controls.Add(this.label4);
             this.leftPanel.Controls.Add(this.sourceTxt);
             this.leftPanel.Controls.Add(this.label3);
-            this.leftPanel.Size = new System.Drawing.Size(289, 621);
+            this.leftPanel.Size = new System.Drawing.Size(289, 790);
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             // 
             // backBtnPanel
@@ -75,11 +75,11 @@
             // right_panel
             // 
             this.right_panel.Location = new System.Drawing.Point(289, 0);
-            this.right_panel.Size = new System.Drawing.Size(579, 687);
+            this.right_panel.Size = new System.Drawing.Size(579, 856);
             // 
             // rightPanel
             // 
-            this.rightPanel.Size = new System.Drawing.Size(579, 621);
+            this.rightPanel.Size = new System.Drawing.Size(579, 790);
             // 
             // label1
             // 
@@ -88,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 131);
+            this.label3.Location = new System.Drawing.Point(8, 398);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 0;
@@ -96,24 +96,26 @@
             // 
             // sourceTxt
             // 
-            this.sourceTxt.Location = new System.Drawing.Point(7, 154);
+            this.sourceTxt.Location = new System.Drawing.Point(12, 421);
             this.sourceTxt.MaxLength = 200;
             this.sourceTxt.Name = "sourceTxt";
             this.sourceTxt.Size = new System.Drawing.Size(262, 27);
             this.sourceTxt.TabIndex = 1;
+            this.sourceTxt.TextChanged += new System.EventHandler(this.sourceTxt_TextChanged);
             // 
             // dbTxt
             // 
-            this.dbTxt.Location = new System.Drawing.Point(7, 218);
+            this.dbTxt.Location = new System.Drawing.Point(12, 485);
             this.dbTxt.MaxLength = 100;
             this.dbTxt.Name = "dbTxt";
             this.dbTxt.Size = new System.Drawing.Size(262, 27);
             this.dbTxt.TabIndex = 3;
+            this.dbTxt.TextChanged += new System.EventHandler(this.dbTxt_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 195);
+            this.label4.Location = new System.Drawing.Point(8, 462);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 2;
@@ -121,16 +123,17 @@
             // 
             // userIDTxt
             // 
-            this.userIDTxt.Location = new System.Drawing.Point(7, 285);
+            this.userIDTxt.Location = new System.Drawing.Point(12, 552);
             this.userIDTxt.MaxLength = 50;
             this.userIDTxt.Name = "userIDTxt";
             this.userIDTxt.Size = new System.Drawing.Size(262, 27);
             this.userIDTxt.TabIndex = 5;
+            this.userIDTxt.TextChanged += new System.EventHandler(this.userIDTxt_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 262);
+            this.label5.Location = new System.Drawing.Point(8, 529);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 4;
@@ -139,17 +142,18 @@
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(7, 350);
+            this.passwordTxt.Location = new System.Drawing.Point(12, 617);
             this.passwordTxt.MaxLength = 50;
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(262, 27);
             this.passwordTxt.TabIndex = 7;
             this.passwordTxt.UseSystemPasswordChar = true;
+            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 327);
+            this.label6.Location = new System.Drawing.Point(8, 594);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 20);
             this.label6.TabIndex = 6;
@@ -157,20 +161,22 @@
             // 
             // isCB
             // 
+            this.isCB.AllowDrop = true;
             this.isCB.AutoSize = true;
-            this.isCB.Location = new System.Drawing.Point(12, 393);
+            this.isCB.Location = new System.Drawing.Point(17, 660);
             this.isCB.Name = "isCB";
             this.isCB.Size = new System.Drawing.Size(156, 24);
             this.isCB.TabIndex = 8;
             this.isCB.Text = "Integrated Security";
             this.isCB.UseVisualStyleBackColor = true;
             this.isCB.CheckedChanged += new System.EventHandler(this.isCB_CheckedChanged);
+            this.isCB.Click += new System.EventHandler(this.isCB_Click);
             // 
             // saveBtn
             // 
             this.saveBtn.FlatAppearance.BorderSize = 2;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Location = new System.Drawing.Point(7, 449);
+            this.saveBtn.Location = new System.Drawing.Point(12, 716);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(262, 49);
             this.saveBtn.TabIndex = 9;
@@ -182,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 687);
+            this.ClientSize = new System.Drawing.Size(868, 856);
             this.Name = "SettingsWindow";
             this.Text = "Settings";
             this.left_panel.ResumeLayout(false);

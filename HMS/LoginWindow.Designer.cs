@@ -90,6 +90,7 @@
             this.userTxt.Name = "userTxt";
             this.userTxt.Size = new System.Drawing.Size(260, 27);
             this.userTxt.TabIndex = 1;
+            this.userTxt.Text = "username";
             this.userTxt.TextChanged += new System.EventHandler(this.userTxt_TextChanged);
             // 
             // passwordTxt
@@ -99,6 +100,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(260, 27);
             this.passwordTxt.TabIndex = 3;
+            this.passwordTxt.Text = "password";
             this.passwordTxt.UseSystemPasswordChar = true;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 

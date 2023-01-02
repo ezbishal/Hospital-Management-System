@@ -35,6 +35,8 @@ namespace HMS
         {
             if (isCB.Checked)
             {
+                userIDTxt.BackColor = Color.White;
+                passwordTxt.BackColor = Color.White;
                 userIDTxt.AllowDrop = true;
                 passwordTxt.AllowDrop = true;
 
@@ -46,6 +48,8 @@ namespace HMS
                 else
                 {
                     settings.createFile("\\hms_connect", 1, sourceTxt.Text, dbTxt.Text);
+                    LoginWindow lw = new LoginWindow();
+                    MainClass.showWindow(lw, this, MDI.ActiveForm);
 
                 }
             }
@@ -62,18 +66,20 @@ namespace HMS
                 else
                 {
                     settings.createFile("\\hms_connect", 0, sourceTxt.Text, dbTxt.Text, userIDTxt.Text, passwordTxt.Text);
-
+                    LoginWindow lw = new LoginWindow();
+                    MainClass.showWindow(lw, this, MDI.ActiveForm);
                 }
 
             }
-            LoginWindow lw = new LoginWindow();
-            MainClass.showWindow(lw, this, MDI.ActiveForm);
+            
         }
 
         private void isCB_CheckedChanged(object sender, EventArgs e)
         {
             if (isCB.Checked)
             {
+                userIDTxt.BackColor = Color.White;
+                passwordTxt.BackColor = Color.White;
                 userIDTxt.Enabled = false;
                 passwordTxt.Enabled = false;
                 userIDTxt.Text = "";
@@ -84,6 +90,31 @@ namespace HMS
                 userIDTxt.Enabled = true;
                 passwordTxt.Enabled = true;
             }
+        }
+
+        private void sourceTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (sourceTxt.Text == "") { sourceTxt.BackColor = Color.Firebrick; } else { sourceTxt.BackColor = Color.White; }
+        }
+
+        private void dbTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (dbTxt.Text == "") { dbTxt.BackColor = Color.Firebrick; } else { dbTxt.BackColor = Color.White; }
+        }
+
+        private void userIDTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (userIDTxt.Text == "") { userIDTxt.BackColor = Color.Firebrick; } else { userIDTxt.BackColor = Color.White; }
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (passwordTxt.Text == "") { passwordTxt.BackColor = Color.Firebrick; } else { passwordTxt.BackColor = Color.White; }
+        }
+
+        private void isCB_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

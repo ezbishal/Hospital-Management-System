@@ -40,7 +40,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.addressTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.roleDD = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,7 @@
             this.phoneGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.left_panel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -69,7 +69,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(808, 635);
+            this.groupBox1.Size = new System.Drawing.Size(808, 631);
             // 
             // panel1
             // 
@@ -81,8 +81,8 @@
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.label10);
             this.leftPanel.Controls.Add(this.roleDD);
-            this.leftPanel.Controls.Add(this.label9);
             this.leftPanel.Controls.Add(this.addressTxt);
             this.leftPanel.Controls.Add(this.label8);
             this.leftPanel.Controls.Add(this.phoneTxt);
@@ -93,7 +93,8 @@
             this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.nameTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 692);
+            this.leftPanel.Location = new System.Drawing.Point(0, 70);
+            this.leftPanel.Size = new System.Drawing.Size(289, 702);
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.nameTxt, 0);
@@ -106,16 +107,16 @@
             this.leftPanel.Controls.SetChildIndex(this.label8, 0);
             this.leftPanel.Controls.SetChildIndex(this.addressTxt, 0);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
-            this.leftPanel.Controls.SetChildIndex(this.label9, 0);
             this.leftPanel.Controls.SetChildIndex(this.roleDD, 0);
+            this.leftPanel.Controls.SetChildIndex(this.label10, 0);
             // 
             // backBtnPanel
             // 
-            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 70);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(808, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(808, 70);
             // 
             // right_panel
             // 
@@ -124,16 +125,17 @@
             // 
             // rightPanel
             // 
-            this.rightPanel.Location = new System.Drawing.Point(0, 66);
-            this.rightPanel.Size = new System.Drawing.Size(808, 706);
+            this.rightPanel.Location = new System.Drawing.Point(0, 70);
+            this.rightPanel.Size = new System.Drawing.Size(808, 702);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(165, 0);
+            this.label1.Size = new System.Drawing.Size(124, 70);
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(609, 66);
+            this.label2.Size = new System.Drawing.Size(609, 70);
             // 
             // label4
             // 
@@ -181,6 +183,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(256, 27);
             this.passwordTxt.TabIndex = 6;
+            this.passwordTxt.UseSystemPasswordChar = true;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // label6
@@ -230,16 +233,6 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Address";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Enabled = false;
-            this.label9.Location = new System.Drawing.Point(12, 469);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 20);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Role";
             // 
             // roleDD
             // 
@@ -293,7 +286,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 602);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(802, 598);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -366,6 +360,15 @@
             this.RoleGV.Name = "RoleGV";
             this.RoleGV.ReadOnly = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 469);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Role";
+            // 
             // StaffWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -400,7 +403,6 @@
         private System.Windows.Forms.TextBox nameTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox roleDD;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleIDGV;
@@ -411,5 +413,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleGV;
+        private System.Windows.Forms.Label label10;
     }
 }

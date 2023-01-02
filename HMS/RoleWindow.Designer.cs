@@ -53,7 +53,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(810, 697);
+            this.groupBox1.Size = new System.Drawing.Size(810, 693);
             // 
             // panel1
             // 
@@ -67,18 +67,18 @@
             // 
             this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.roleTxt);
-            this.leftPanel.Size = new System.Drawing.Size(289, 754);
+            this.leftPanel.Size = new System.Drawing.Size(289, 764);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.roleTxt, 0);
             this.leftPanel.Controls.SetChildIndex(this.label5, 0);
             // 
             // backBtnPanel
             // 
-            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 70);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(810, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(810, 70);
             // 
             // right_panel
             // 
@@ -87,16 +87,11 @@
             // 
             // rightPanel
             // 
-            this.rightPanel.Location = new System.Drawing.Point(0, 66);
-            this.rightPanel.Size = new System.Drawing.Size(810, 768);
+            this.rightPanel.Size = new System.Drawing.Size(810, 764);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(165, 0);
-            // 
-            // label2
-            // 
-            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // dataGridView1
             // 
@@ -132,7 +127,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 664);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(804, 660);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -180,7 +176,7 @@
             this.roleTxt.Name = "roleTxt";
             this.roleTxt.Size = new System.Drawing.Size(271, 27);
             this.roleTxt.TabIndex = 5;
-            this.roleTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
+            this.roleTxt.TextChanged += new System.EventHandler(this.roleTxt_TextChanged);
             // 
             // RoleWindow
             // 

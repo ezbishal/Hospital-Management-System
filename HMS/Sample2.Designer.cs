@@ -57,40 +57,38 @@
             // leftPanel
             // 
             this.leftPanel.Controls.Add(this.panel2);
-            this.leftPanel.Location = new System.Drawing.Point(0, 80);
-            this.leftPanel.Size = new System.Drawing.Size(369, 736);
+            this.leftPanel.Location = new System.Drawing.Point(0, 70);
+            this.leftPanel.Size = new System.Drawing.Size(369, 746);
             // 
             // backBtnPanel
             // 
             this.backBtnPanel.Controls.Add(this.backBtn);
-            this.backBtnPanel.Size = new System.Drawing.Size(369, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(369, 70);
             this.backBtnPanel.Controls.SetChildIndex(this.label1, 0);
             this.backBtnPanel.Controls.SetChildIndex(this.backBtn, 0);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(914, 80);
+            this.usernamePanel.Size = new System.Drawing.Size(914, 70);
             // 
             // right_panel
             // 
-            this.right_panel.Location = new System.Drawing.Point(369, 0);
             this.right_panel.Size = new System.Drawing.Size(914, 816);
             // 
             // rightPanel
             // 
             this.rightPanel.Controls.Add(this.groupBox1);
             this.rightPanel.Controls.Add(this.panel1);
-            this.rightPanel.Location = new System.Drawing.Point(0, 80);
-            this.rightPanel.Size = new System.Drawing.Size(914, 736);
+            this.rightPanel.Location = new System.Drawing.Point(0, 70);
+            this.rightPanel.Size = new System.Drawing.Size(914, 746);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(245, 0);
-            this.label1.Size = new System.Drawing.Size(124, 80);
+            this.label1.Size = new System.Drawing.Size(124, 70);
             // 
             // label2
             // 
-            this.label2.Size = new System.Drawing.Size(609, 80);
+            this.label2.Size = new System.Drawing.Size(609, 70);
             // 
             // panel2
             // 
@@ -106,7 +104,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(914, 665);
+            this.groupBox1.Size = new System.Drawing.Size(914, 675);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
@@ -233,6 +231,7 @@
             this.viewBtn.TabIndex = 6;
             this.viewBtn.Text = "&VIEW";
             this.viewBtn.UseVisualStyleBackColor = true;
+            this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click_1);
             // 
             // backBtn
             // 

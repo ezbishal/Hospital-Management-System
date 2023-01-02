@@ -59,7 +59,13 @@ namespace HMS
 
         }
 
-        public virtual void backBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeScreen hm = new AdminHomeScreen();
+            MainClass.showWindow(hm, this, MDI.ActiveForm);
+        }
+
+        public virtual void viewBtn_Click_1(object sender, EventArgs e)
         {
 
         }

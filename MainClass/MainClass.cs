@@ -72,6 +72,19 @@ namespace Classes
         {
             foreach (Control c in p.Controls)
             {
+                if (c is ListBox)
+                {
+                    ListBox lb = (ListBox)c;
+                    if (lb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        lb.Items.Clear();
+                        lb.Enabled = true;
+                    }
+                }
                 if (c is TextBox)
                 {
                     TextBox tb = (TextBox)c;
@@ -177,10 +190,264 @@ namespace Classes
             }
         }
 
+        public static void resetEnable(GroupBox p)
+        {
+            foreach (Control c in p.Controls)
+            {
+                if (c is GroupBox)
+                {
+                    GroupBox gb = (GroupBox)c;
+                    resetEnable(gb);
+                }
+                if (c is ListBox)
+                {
+                    ListBox lb = (ListBox)c;
+                    if (lb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        lb.Items.Clear();
+                        lb.Enabled = true;
+                    }
+                }
+                if (c is TextBox)
+                {
+                    TextBox tb = (TextBox)c;
+                    if (tb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        tb.Text = "";
+                        tb.Enabled = true;
+                        tb.BackColor = Color.White;
+                    }
+                }
+
+                if (c is ComboBox)
+                {
+                    ComboBox cb = (ComboBox)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.SelectedIndex = -1;
+                        cb.Enabled = true;
+                        cb.BackColor = Color.White;
+                    }
+
+                }
+
+                if (c is RadioButton)
+                {
+                    RadioButton rb = (RadioButton)c;
+                    if (rb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        rb.Checked = false;
+                        rb.Enabled = true;
+                        rb.BackColor = Color.White;
+                    }
+
+                }
+
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Checked = false;
+                        cb.Enabled = true;
+                        cb.BackColor = Color.White;
+                    }
+
+                }
+                if (c is NumericUpDown)
+                {
+                    NumericUpDown cb = (NumericUpDown)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Enabled = true;
+                        cb.Value = 0;
+                    }
+
+                }
+                if (c is Button)
+                {
+                    Button cb = (Button)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Enabled = true;
+                    }
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dt = (DateTimePicker)c;
+                    if (dt.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Value = DateTime.Now;
+                        dt.Enabled = true;
+                    }
+                }
+
+            }
+        }
+
+        public static void resetEnable(TableLayoutPanel p)
+        {
+            foreach (Control c in p.Controls)
+            {
+                if (c is TableLayoutPanel)
+                {
+                    TableLayoutPanel gb = (TableLayoutPanel)c;
+                    resetEnable(gb);
+                }
+                if (c is TextBox)
+                {
+                    TextBox tb = (TextBox)c;
+                    if (tb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        tb.Text = "";
+                        tb.Enabled = true;
+                        tb.BackColor = Color.White;
+                    }
+                }
+
+                if (c is ComboBox)
+                {
+                    ComboBox cb = (ComboBox)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.SelectedIndex = -1;
+                        cb.Enabled = true;
+                        cb.BackColor = Color.White;
+                    }
+
+                }
+
+                if (c is RadioButton)
+                {
+                    RadioButton rb = (RadioButton)c;
+                    if (rb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        rb.Checked = false;
+                        rb.Enabled = true;
+                        rb.BackColor = Color.White;
+                    }
+
+                }
+
+                if (c is CheckBox)
+                {
+                    CheckBox cb = (CheckBox)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Checked = false;
+                        cb.Enabled = true;
+                        cb.BackColor = Color.White;
+                    }
+
+                }
+                if (c is NumericUpDown)
+                {
+                    NumericUpDown cb = (NumericUpDown)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Enabled = true;
+                        cb.Value = 0;
+                    }
+
+                }
+                if (c is Button)
+                {
+                    Button cb = (Button)c;
+                    if (cb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        cb.Enabled = true;
+                    }
+                }
+                if (c is DateTimePicker)
+                {
+                    DateTimePicker dt = (DateTimePicker)c;
+                    if (dt.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        dt.Value = DateTime.Now;
+                        dt.Enabled = true;
+                    }
+                }
+
+            }
+        }
+
         public static void resetDisable(Panel p)
         {
             foreach (Control c in p.Controls)
             {
+                if (c is ListBox)
+                {
+                    ListBox lb = (ListBox)c;
+                    if (lb.TabStop == false)
+                    {
+
+                    }
+                    else
+                    {
+                        lb.DataSource = null;
+                        lb.Enabled = false;
+                    }
+                }
                 if (c is TextBox)
                 {
                     TextBox tb = (TextBox)c;
@@ -397,8 +664,9 @@ namespace Classes
                                 arr.Remove(tb);
                             }
                         }
+                        tb.BackColor = tb.Text == "" ? tb.BackColor = Color.Firebrick : tb.BackColor = Color.White;
                     }
-                    tb.BackColor = tb.Text == "" ? tb.BackColor = Color.Firebrick : tb.BackColor = Color.White;
+                    
 
                 }
 
@@ -423,8 +691,8 @@ namespace Classes
                                 arr.Remove(cb);
                             }
                         }
+                        cb.BackColor = cb.SelectedIndex == -1 ? cb.BackColor = Color.Firebrick : cb.BackColor = Color.White;
                     }
-                    cb.BackColor = cb.SelectedIndex == -1 ? cb.BackColor = Color.Firebrick : cb.BackColor = Color.White;
                 }
 
                 if (c is RadioButton)
@@ -448,8 +716,9 @@ namespace Classes
                                 arr.Remove(rb);
                             }
                         }
+                        rb.BackColor = !rb.Checked ? rb.BackColor = Color.Firebrick : rb.BackColor = Color.White;
+
                     }
-                    rb.BackColor = !rb.Checked ? rb.BackColor = Color.Firebrick : rb.BackColor = Color.White;
                 }
 
                 if (c is CheckBox)
@@ -475,7 +744,7 @@ namespace Classes
                             }
                         }
                     }
-                    cb.BackColor = !cb.Checked ? cb.BackColor = Color.Firebrick : cb.BackColor = Color.White;
+                    
                 }
                 if (c is NumericUpDown)
                 {

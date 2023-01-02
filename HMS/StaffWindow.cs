@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections;
 
 namespace HMS
 {
@@ -121,7 +120,7 @@ namespace HMS
                     ht.Add("@roleID", Convert.ToInt32(roleDD.SelectedValue.ToString()));
                     ht.Add("@id", userID);
 
-                    if (crud.insert_update_delete("st_upadateUsers", ht) > 0)
+                    if (crud.insert_update_delete("st_updateUsers", ht) > 0)
                     {
                         MainClass.showMessage(nameTxt.Text + " updated successfully into the system", "success");
                         MainClass.resetDisable(leftPanel);
@@ -141,7 +140,7 @@ namespace HMS
                     Hashtable ht = new Hashtable();
                     ht.Add("@id", userID);
 
-                    if (crud.insert_update_delete("st_deleteUsers", ht) > 0)
+                    if (crud.insert_update_delete("st_deleteUser", ht) > 0)
                     {
                         MainClass.showMessage(nameTxt.Text + " deleted successfully from the system.", "success");
                         MainClass.resetDisable(leftPanel);
@@ -151,7 +150,7 @@ namespace HMS
             }
         }
 
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
             loadUsers();
         }
@@ -161,16 +160,11 @@ namespace HMS
             
         }
 
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
-        }
-
         private void StaffWindow_Load(object sender, EventArgs e)
         {
             Hashtable ht = new Hashtable();
             crud.loadList("st_getRoles", roleDD, "ID", "Role", ht);
+            roleDD.BackColor = Color.White;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -182,10 +176,10 @@ namespace HMS
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 userID = Convert.ToInt32(row.Cells["userIDGV"].Value.ToString());
                 nameTxt.Text = row.Cells["nameGV"].Value.ToString();
-                nameTxt.Text = row.Cells["usernameGV"].Value.ToString();
-                nameTxt.Text = row.Cells["passGV"].Value.ToString();
-                nameTxt.Text = row.Cells["phoneGV"].Value.ToString();
-                nameTxt.Text = row.Cells["addressGV"].Value.ToString();
+                userTxt.Text = row.Cells["usernameGV"].Value.ToString();
+                passwordTxt.Text = row.Cells["passGV"].Value.ToString();
+                phoneTxt.Text = row.Cells["phoneGV"].Value.ToString();
+                addressTxt.Text = row.Cells["addressGV"].Value.ToString();
                 roleDD.SelectedValue = row.Cells["roleIDGV"].Value;
 
             }

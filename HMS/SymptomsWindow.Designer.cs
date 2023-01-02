@@ -32,14 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.symptomTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.diseaseDD = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sympIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sympGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diseaseIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diseaseGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.left_panel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -57,11 +53,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(511, 313);
+            this.groupBox1.Size = new System.Drawing.Size(754, 309);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(511, 71);
+            this.panel1.Size = new System.Drawing.Size(754, 71);
             // 
             // left_panel
             // 
@@ -69,42 +65,33 @@
             // 
             // leftPanel
             // 
-            this.leftPanel.Controls.Add(this.diseaseDD);
-            this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.symptomTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 370);
+            this.leftPanel.Size = new System.Drawing.Size(289, 380);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.symptomTxt, 0);
-            this.leftPanel.Controls.SetChildIndex(this.label5, 0);
-            this.leftPanel.Controls.SetChildIndex(this.diseaseDD, 0);
             // 
             // backBtnPanel
             // 
-            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 70);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(511, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(754, 70);
             // 
             // right_panel
             // 
             this.right_panel.Location = new System.Drawing.Point(289, 0);
-            this.right_panel.Size = new System.Drawing.Size(511, 450);
+            this.right_panel.Size = new System.Drawing.Size(754, 450);
             // 
             // rightPanel
             // 
-            this.rightPanel.Location = new System.Drawing.Point(0, 66);
-            this.rightPanel.Size = new System.Drawing.Size(511, 384);
+            this.rightPanel.Size = new System.Drawing.Size(754, 380);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(165, 0);
-            // 
-            // label2
-            // 
-            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // label4
             // 
@@ -121,25 +108,7 @@
             this.symptomTxt.Name = "symptomTxt";
             this.symptomTxt.Size = new System.Drawing.Size(260, 27);
             this.symptomTxt.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Disease";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // diseaseDD
-            // 
-            this.diseaseDD.Enabled = false;
-            this.diseaseDD.FormattingEnabled = true;
-            this.diseaseDD.Location = new System.Drawing.Point(12, 200);
-            this.diseaseDD.Name = "diseaseDD";
-            this.diseaseDD.Size = new System.Drawing.Size(260, 28);
-            this.diseaseDD.TabIndex = 4;
+            this.symptomTxt.TextChanged += new System.EventHandler(this.symptomTxt_TextChanged);
             // 
             // dataGridView1
             // 
@@ -159,9 +128,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.snoGV,
             this.sympIDGV,
-            this.sympGV,
-            this.diseaseIDGV,
-            this.diseaseGV});
+            this.sympGV});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,7 +144,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 280);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(748, 276);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -205,26 +173,11 @@
             this.sympGV.Name = "sympGV";
             this.sympGV.ReadOnly = true;
             // 
-            // diseaseIDGV
-            // 
-            this.diseaseIDGV.HeaderText = "DiseaseID";
-            this.diseaseIDGV.MinimumWidth = 6;
-            this.diseaseIDGV.Name = "diseaseIDGV";
-            this.diseaseIDGV.ReadOnly = true;
-            this.diseaseIDGV.Visible = false;
-            // 
-            // diseaseGV
-            // 
-            this.diseaseGV.HeaderText = "Disease";
-            this.diseaseGV.MinimumWidth = 6;
-            this.diseaseGV.Name = "diseaseGV";
-            this.diseaseGV.ReadOnly = true;
-            // 
             // SymptomsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1043, 450);
             this.Name = "SymptomsWindow";
             this.Text = "SymptomsWindow";
             this.Load += new System.EventHandler(this.SymptomsWindow_Load);
@@ -244,14 +197,10 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox diseaseDD;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox symptomTxt;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn sympIDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn sympGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diseaseIDGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diseaseGV;
     }
 }

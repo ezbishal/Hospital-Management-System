@@ -25,16 +25,9 @@ namespace HMS
 
         }
 
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
-        }
-
         private void SymptomsWindow_Load(object sender, EventArgs e)
         {
-            Hashtable ht = new Hashtable();
-            crud.loadList("st_getDiseases", diseaseDD, "ID", "Disease", ht);
+           
         }
 
         private void loadSymptoms()
@@ -42,8 +35,6 @@ namespace HMS
             ListBox loadDa = new ListBox();
             loadDa.Items.Add(sympIDGV);
             loadDa.Items.Add(sympGV);
-            loadDa.Items.Add(diseaseIDGV);
-            loadDa.Items.Add(diseaseGV);
 
             crud.loadData("st_getSymptoms", dataGridView1, loadDa);
         }
@@ -61,7 +52,6 @@ namespace HMS
                 {
                     Hashtable ht = new Hashtable();
                     ht.Add("@symptom", symptomTxt.Text);
-                    ht.Add("@did", Convert.ToInt32(diseaseDD.SelectedValue.ToString()));
 
 
                     if (crud.insert_update_delete("st_insertSymptoms", ht) > 0)
@@ -79,7 +69,6 @@ namespace HMS
                 {
                     Hashtable ht = new Hashtable();
                     ht.Add("@symptom", symptomTxt.Text);
-                    ht.Add("@did", Convert.ToInt32(diseaseDD.SelectedValue.ToString()));
                     ht.Add("@sid", symptomID);
 
                     if (crud.insert_update_delete("st_updateSymptom", ht) > 0)
@@ -112,9 +101,9 @@ namespace HMS
             }
         }
 
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
-
+            loadSymptoms();
         }
 
         public override void searchTxt_TextChanged(object sender, EventArgs e)
@@ -131,8 +120,13 @@ namespace HMS
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 symptomID = Convert.ToInt64(row.Cells["sympIDGV"].Value.ToString());
                 symptomTxt.Text = row.Cells["sympGV"].Value.ToString();
-                diseaseDD.SelectedValue = row.Cells["diseaseIDGV"].Value;
             }
+        }
+
+        private void symptomTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (symptomTxt.Text == "") { symptomTxt.BackColor = Color.Firebrick; } else { symptomTxt.BackColor = Color.White; }
+
         }
     }
 }

@@ -22,6 +22,8 @@ namespace HMS
             InitializeComponent();
         }
 
+        public static int d, m, y;
+
         private void loadPatients()
         {
             ListBox loadDa = new ListBox();
@@ -50,16 +52,14 @@ namespace HMS
 
         }
 
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
-        }
 
         private void PatientRegistration_Load(object sender, EventArgs e)
         {
             Hashtable ht = new Hashtable();
             crud.loadList("st_getDoctors", apptForDD, "ID", "Doctor", ht);
+
+            dataGridView1.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
+            phoneTxt.BackColor = Color.White;
         }
 
         private bool get_checkPatientRecord(string phone)
@@ -97,106 +97,105 @@ namespace HMS
             catch (Exception)
             {
                 MainClass.con.Close();
-                throw;
             }
             return check;
         }
 
-        private void phoneTxt_Leave(object sender, EventArgs e)
-        {
-            if(phoneTxt.Text != "")
-            {
-                if(get_checkPatientRecord(phoneTxt.Text))
-                {
-
-                }
-                else
-                {
-                    MainClass.resetEnable(leftPanel);
-                }
-            }
-        }
 
         Int64 patID;
         Int64 appointmentID;
         public override void saveBtn_Click(object sender, EventArgs e)
         {
-            if (MainClass.checkControls(leftPanel).Count > 0)
+            using (TransactionScope sc = new TransactionScope())
             {
-                MainClass.showMessage("Fields with RED are mandatory!", "error");
-            }
-            else
-            { 
-                if (edit == 0) // Code for save
+
+
+                if (MainClass.checkControls(leftPanel).Count > 0)
                 {
-                    Hashtable ht = new Hashtable();
-                    ht.Add("@name", patientTxt.Text);
-                    ht.Add("@guard", guardianTxt.Text);
-                    ht.Add("@phone", phoneTxt.Text);
-                    ht.Add("@age", ageTxt.Text);
-
-                    if (crud.insert_update_delete("st_insertPatientReg", ht) > 0)
-                    {
-                        Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
-
-                        Hashtable htt = new Hashtable();
-                        htt.Add("@date", apptDT.Value);
-                        htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                        htt.Add("@patientID", patientID);
-                        htt.Add("@status", 0);
-                        htt.Add("@day", apptDT.Value.Day);
-                        htt.Add("@month", apptDT.Value.Month);
-                        htt.Add("@year", apptDT.Value.Year);
-
-                        if (crud.insert_update_delete("st_insertAppointment", htt) > 0)
-                        {
-                            MainClass.showMessage(patientTxt.Text + " added successfully!", "success");
-                            MainClass.resetDisable(leftPanel);
-                            loadPatients();
-                        }
-
-                        
-                    }
-                    else
-                    {
-                        MainClass.showMessage("Unable to save record.", "error");
-                    }
+                    MainClass.showMessage("Fields with RED are mandatory!", "error");
                 }
-                else if (edit == 1) //Code for update
+                else
                 {
-                    Hashtable ht = new Hashtable();
-                    ht.Add("@name", patientTxt.Text);
-                    ht.Add("@guard", guardianTxt.Text);
-                    ht.Add("@phone", phoneTxt.Text);
-                    ht.Add("@age", ageTxt.Text);
-                    ht.Add("@id", patID);
+                    d = apptDT.Value.Day;
+                    m = apptDT.Value.Month;
+                    y = apptDT.Value.Year;
 
-                    if (crud.insert_update_delete("st_updatePatientReg", ht) > 0)
+                    if (edit == 0) // Code for save
                     {
-                        //Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
+                        Hashtable ht = new Hashtable();
+                        ht.Add("@name", patientTxt.Text);
+                        ht.Add("@guard", guardianTxt.Text);
+                        ht.Add("@phone", phoneTxt.Text);
+                        ht.Add("@age", ageTxt.Text);
 
-                        Hashtable htt = new Hashtable();
-                        htt.Add("@date", apptDT.Text);
-                        htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                        htt.Add("@patientID", patID);
-                        htt.Add("@status", 0);
-                        htt.Add("@id", appointmentID);
-
-
-                        if (crud.insert_update_delete("st_updateAppointment", htt) > 0)
+                        if (crud.insert_update_delete("st_insertPatientReg", ht) > 0)
                         {
-                            MainClass.showMessage(patientTxt.Text + " updated successfully!", "success");
-                            MainClass.resetDisable(leftPanel);
-                            loadPatients();
+                            Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
+
+                            Hashtable htt = new Hashtable();
+                            htt.Add("@date", apptDT.Value.ToString("dd-MMM-yyyy hh:mm tt"));
+                            htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
+                            htt.Add("@patientID", patientID);
+                            htt.Add("@status", 0);
+                            htt.Add("@day", apptDT.Value.Day);
+                            htt.Add("@month", apptDT.Value.Month);
+                            htt.Add("@year", apptDT.Value.Year);
+
+                            if (crud.insert_update_delete("st_insertAppointment", htt) > 0)
+                            {
+                                MainClass.showMessage(patientTxt.Text + " added successfully!", "success");
+                                MainClass.resetDisable(leftPanel);
+                                loadPatients();
+                                TokenReportForm tt = new TokenReportForm();
+                                tt.Show();
+                            }
+
+
                         }
-
-
+                        else
+                        {
+                            MainClass.showMessage("Unable to save record.", "error");
+                        }
                     }
-                    else
+                    else if (edit == 1) //Code for update
                     {
-                        MainClass.showMessage("Unable to save record.", "error");
+                        Hashtable ht = new Hashtable();
+                        ht.Add("@name", patientTxt.Text);
+                        ht.Add("@guard", guardianTxt.Text);
+                        ht.Add("@phone", phoneTxt.Text);
+                        ht.Add("@age", ageTxt.Text);
+                        ht.Add("@id", patID);
+
+                        if (crud.insert_update_delete("st_updatePatientReg", ht) > 0)
+                        {
+                            //Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
+
+                            Hashtable htt = new Hashtable();
+                            htt.Add("@date", apptDT.Text);
+                            htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
+                            htt.Add("@patientID", patID);
+                            htt.Add("@status", 0);
+                            htt.Add("@id", appointmentID);
+
+
+                            if (crud.insert_update_delete("st_updateAppointment", htt) > 0)
+                            {
+                                MainClass.showMessage(patientTxt.Text + " updated successfully!", "success");
+                                MainClass.resetDisable(leftPanel);
+                                loadPatients();
+                            }
+
+
+                        }
+                        else
+                        {
+                            MainClass.showMessage("Unable to save record.", "error");
+                        }
                     }
+
                 }
+                
+                sc.Complete();
             }
         }
 
@@ -220,7 +219,7 @@ namespace HMS
             }
         }
 
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
             loadPatients();
         }
@@ -236,17 +235,80 @@ namespace HMS
                 appointmentID = Convert.ToInt64(row.Cells["apptIDGV"].Value.ToString());
                 phoneTxt.Text = row.Cells["phoneGV"].Value.ToString();
                 patientTxt.Text = row.Cells["patientGV"].Value.ToString();
-                guardianTxt.Text = row.Cells["guardGV"].Value.ToString();
+                guardianTxt.Text = row.Cells["guardianGV"].Value.ToString();
                 apptDT.Value = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString());
                 apptForDD.SelectedValue = row.Cells["doctorIDGV"].Value;
                 ageTxt.Text = row.Cells["ageGV"].Value.ToString();
                 get_checkPatientRecord(phoneTxt.Text);
             }
         }
+        public static int hours, minutes;
+        public static int gridClick = 0;
+
+        private void phoneTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (phoneTxt.Text == "") { phoneTxt.BackColor = Color.Firebrick; } else { phoneTxt.BackColor = Color.White; }
+
+        }
+
+        private void patientTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (patientTxt.Text == "") { patientTxt.BackColor = Color.Firebrick; } else { patientTxt.BackColor = Color.White; }
+
+        }
+
+        private void guardianTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (guardianTxt.Text == "") { guardianTxt.BackColor = Color.Firebrick; } else { guardianTxt.BackColor = Color.White; }
+
+        }
+
+        private void ageTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (ageTxt.Text == "") { ageTxt.BackColor = Color.Firebrick; } else { ageTxt.BackColor = Color.White; }
+
+        }
+
+        private void apptForDD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (apptForDD.SelectedIndex == -1) { phoneTxt.BackColor = Color.Firebrick; } else { phoneTxt.BackColor = Color.White; }
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.ColumnIndex != -1)
+            {
+                gridClick = 1;
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                d = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString()).Day;
+                m = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString()).Month;
+                y = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString()).Year;
+                hours = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString()).Hour;
+                minutes = Convert.ToDateTime(row.Cells["apptDTGV"].Value.ToString()).Minute;
+                TokenReportForm tt = new TokenReportForm();
+                tt.Show();
+            }
+        }
 
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void phoneTxt_Leave_1(object sender, EventArgs e)
+        {
+            if (phoneTxt.Text != "")
+            {
+                if (get_checkPatientRecord(phoneTxt.Text))
+                {
+                 
+                }
+                else
+                {
+
+                }
+            }
         }
     }
 }

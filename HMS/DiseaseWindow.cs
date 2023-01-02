@@ -20,12 +20,6 @@ namespace HMS
             InitializeComponent();
         }
 
-        public override void backBtn_Click(object sender, EventArgs e)
-        {
-            AdminHomeScreen hm = new AdminHomeScreen();
-            MainClass.showWindow(hm, this, MDI.ActiveForm);
-        }
-
         private void DiseaseWindow_Load(object sender, EventArgs e)
         {
 
@@ -101,7 +95,7 @@ namespace HMS
             }
         }
 
-        public override void viewBtn_Click(object sender, EventArgs e)
+        public override void viewBtn_Click_1(object sender, EventArgs e)
         {
             loadDiseases();
         }
@@ -121,6 +115,12 @@ namespace HMS
                 diseaseID = Convert.ToInt32(row.Cells["diseaseIDGV"].Value.ToString());
                 diseaseTxt.Text = row.Cells["diseaseGV"].Value.ToString();
             }
+        }
+
+        private void diseaseTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (diseaseTxt.Text == "") { diseaseTxt.BackColor = Color.Firebrick; } else { diseaseTxt.BackColor = Color.White; }
+
         }
     }
 }

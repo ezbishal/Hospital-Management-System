@@ -51,5 +51,10 @@ namespace HMS
             LoginWindow lw = new LoginWindow();
             MainClass.showWindow(lw, MDI.ActiveForm);
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

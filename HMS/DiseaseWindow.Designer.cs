@@ -53,11 +53,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(511, 313);
+            this.groupBox1.Size = new System.Drawing.Size(742, 309);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(511, 71);
+            this.panel1.Size = new System.Drawing.Size(742, 71);
             // 
             // left_panel
             // 
@@ -67,36 +67,31 @@
             // 
             this.leftPanel.Controls.Add(this.diseaseTxt);
             this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 370);
+            this.leftPanel.Size = new System.Drawing.Size(289, 380);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
             this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.diseaseTxt, 0);
             // 
             // backBtnPanel
             // 
-            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 70);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(511, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(742, 70);
             // 
             // right_panel
             // 
             this.right_panel.Location = new System.Drawing.Point(289, 0);
-            this.right_panel.Size = new System.Drawing.Size(511, 450);
+            this.right_panel.Size = new System.Drawing.Size(742, 450);
             // 
             // rightPanel
             // 
-            this.rightPanel.Location = new System.Drawing.Point(0, 66);
-            this.rightPanel.Size = new System.Drawing.Size(511, 384);
+            this.rightPanel.Size = new System.Drawing.Size(742, 380);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(165, 0);
-            // 
-            // label2
-            // 
-            this.label2.Size = new System.Drawing.Size(609, 66);
             // 
             // label4
             // 
@@ -113,6 +108,7 @@
             this.diseaseTxt.Name = "diseaseTxt";
             this.diseaseTxt.Size = new System.Drawing.Size(267, 27);
             this.diseaseTxt.TabIndex = 2;
+            this.diseaseTxt.TextChanged += new System.EventHandler(this.diseaseTxt_TextChanged);
             // 
             // dataGridView1
             // 
@@ -148,7 +144,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 280);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(736, 276);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -180,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1031, 450);
             this.Name = "DiseaseWindow";
             this.Text = "DiseaseWindow";
             this.Load += new System.EventHandler(this.DiseaseWindow_Load);

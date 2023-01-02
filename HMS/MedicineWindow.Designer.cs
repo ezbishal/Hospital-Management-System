@@ -30,10 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label4 = new System.Windows.Forms.Label();
             this.medicineTxt = new System.Windows.Forms.TextBox();
             this.companyTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.typeDD = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,6 +40,8 @@
             this.medicineGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.left_panel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -59,11 +59,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Size = new System.Drawing.Size(511, 394);
+            this.groupBox1.Size = new System.Drawing.Size(840, 390);
             // 
             // panel1
             // 
-            this.panel1.Size = new System.Drawing.Size(511, 71);
+            this.panel1.Size = new System.Drawing.Size(840, 71);
             // 
             // left_panel
             // 
@@ -71,57 +71,42 @@
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.label4);
+            this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.typeDD);
             this.leftPanel.Controls.Add(this.label6);
             this.leftPanel.Controls.Add(this.companyTxt);
-            this.leftPanel.Controls.Add(this.label5);
             this.leftPanel.Controls.Add(this.medicineTxt);
-            this.leftPanel.Controls.Add(this.label4);
-            this.leftPanel.Size = new System.Drawing.Size(289, 451);
+            this.leftPanel.Size = new System.Drawing.Size(289, 461);
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             this.leftPanel.Controls.SetChildIndex(this.panel2, 0);
-            this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             this.leftPanel.Controls.SetChildIndex(this.medicineTxt, 0);
-            this.leftPanel.Controls.SetChildIndex(this.label5, 0);
             this.leftPanel.Controls.SetChildIndex(this.companyTxt, 0);
             this.leftPanel.Controls.SetChildIndex(this.label6, 0);
             this.leftPanel.Controls.SetChildIndex(this.typeDD, 0);
+            this.leftPanel.Controls.SetChildIndex(this.label5, 0);
+            this.leftPanel.Controls.SetChildIndex(this.label4, 0);
             // 
             // backBtnPanel
             // 
-            this.backBtnPanel.Size = new System.Drawing.Size(289, 80);
+            this.backBtnPanel.Size = new System.Drawing.Size(289, 70);
             // 
             // usernamePanel
             // 
-            this.usernamePanel.Size = new System.Drawing.Size(511, 66);
+            this.usernamePanel.Size = new System.Drawing.Size(840, 70);
             // 
             // right_panel
             // 
             this.right_panel.Location = new System.Drawing.Point(289, 0);
-            this.right_panel.Size = new System.Drawing.Size(511, 531);
+            this.right_panel.Size = new System.Drawing.Size(840, 531);
             // 
             // rightPanel
             // 
-            this.rightPanel.Location = new System.Drawing.Point(0, 66);
-            this.rightPanel.Size = new System.Drawing.Size(511, 465);
+            this.rightPanel.Size = new System.Drawing.Size(840, 461);
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(165, 0);
-            // 
-            // label2
-            // 
-            this.label2.Size = new System.Drawing.Size(609, 66);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(8, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Medicine";
             // 
             // medicineTxt
             // 
@@ -142,16 +127,6 @@
             this.companyTxt.Name = "companyTxt";
             this.companyTxt.Size = new System.Drawing.Size(254, 27);
             this.companyTxt.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Enabled = false;
-            this.label5.Location = new System.Drawing.Point(8, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Company";
             // 
             // label6
             // 
@@ -213,7 +188,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 361);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(834, 357);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -256,11 +232,29 @@
             this.typeGV.Name = "typeGV";
             this.typeGV.ReadOnly = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Company";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Medicine";
+            // 
             // MedicineWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(1129, 531);
             this.Name = "MedicineWindow";
             this.Text = "Medicine Window";
             this.Load += new System.EventHandler(this.MedicineWindow_Load);
@@ -278,18 +272,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox medicineTxt;
         private System.Windows.Forms.ComboBox typeDD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox companyTxt;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicineIDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicineGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeGV;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
