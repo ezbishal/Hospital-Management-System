@@ -7,7 +7,7 @@ namespace HMS
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        protected System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,12 +28,9 @@ namespace HMS
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        protected void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.staffBtn = new System.Windows.Forms.Button();
-            this.roleBtn = new System.Windows.Forms.Button();
-            this.patientsBtn = new System.Windows.Forms.Button();
             this.checkupBtn = new System.Windows.Forms.Button();
             this.symptomBtn = new System.Windows.Forms.Button();
             this.diseaseBtn = new System.Windows.Forms.Button();
@@ -41,6 +38,9 @@ namespace HMS
             this.testBtn = new System.Windows.Forms.Button();
             this.turnScreenBtn = new System.Windows.Forms.Button();
             this.reportBtn = new System.Windows.Forms.Button();
+            this.patientsBtn = new System.Windows.Forms.Button();
+            this.staffBtn = new System.Windows.Forms.Button();
+            this.roleBtn = new System.Windows.Forms.Button();
             this.left_panel.SuspendLayout();
             this.backBtnPanel.SuspendLayout();
             this.usernamePanel.SuspendLayout();
@@ -107,57 +107,6 @@ namespace HMS
             this.tableLayoutPanel1.Size = new System.Drawing.Size(918, 622);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // staffBtn
-            // 
-            this.staffBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffBtn.FlatAppearance.BorderSize = 2;
-            this.staffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.staffBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.staffBtn.Image = global::HMS.Properties.Resources.staff;
-            this.staffBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.staffBtn.Location = new System.Drawing.Point(232, 3);
-            this.staffBtn.Name = "staffBtn";
-            this.staffBtn.Size = new System.Drawing.Size(223, 149);
-            this.staffBtn.TabIndex = 1;
-            this.staffBtn.Text = "Staff";
-            this.staffBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.staffBtn.UseVisualStyleBackColor = true;
-            this.staffBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // roleBtn
-            // 
-            this.roleBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roleBtn.FlatAppearance.BorderSize = 2;
-            this.roleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roleBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleBtn.Image = global::HMS.Properties.Resources.roles;
-            this.roleBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.roleBtn.Location = new System.Drawing.Point(3, 3);
-            this.roleBtn.Name = "roleBtn";
-            this.roleBtn.Size = new System.Drawing.Size(223, 149);
-            this.roleBtn.TabIndex = 16;
-            this.roleBtn.Text = "Roles";
-            this.roleBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.roleBtn.UseVisualStyleBackColor = true;
-            this.roleBtn.Click += new System.EventHandler(this.roleBtn_Click_2);
-            // 
-            // patientsBtn
-            // 
-            this.patientsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.patientsBtn.FlatAppearance.BorderSize = 2;
-            this.patientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.patientsBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientsBtn.Image = global::HMS.Properties.Resources.patient;
-            this.patientsBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.patientsBtn.Location = new System.Drawing.Point(461, 3);
-            this.patientsBtn.Name = "patientsBtn";
-            this.patientsBtn.Size = new System.Drawing.Size(223, 149);
-            this.patientsBtn.TabIndex = 3;
-            this.patientsBtn.Text = "Patients";
-            this.patientsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.patientsBtn.UseVisualStyleBackColor = true;
-            this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
             // 
             // checkupBtn
             // 
@@ -278,13 +227,64 @@ namespace HMS
             this.reportBtn.UseVisualStyleBackColor = true;
             this.reportBtn.Click += new System.EventHandler(this.button2_Click);
             // 
+            // patientsBtn
+            // 
+            this.patientsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.patientsBtn.FlatAppearance.BorderSize = 2;
+            this.patientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.patientsBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientsBtn.Image = global::HMS.Properties.Resources.patient;
+            this.patientsBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.patientsBtn.Location = new System.Drawing.Point(461, 3);
+            this.patientsBtn.Name = "patientsBtn";
+            this.patientsBtn.Size = new System.Drawing.Size(223, 149);
+            this.patientsBtn.TabIndex = 3;
+            this.patientsBtn.Text = "Patients";
+            this.patientsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.patientsBtn.UseVisualStyleBackColor = true;
+            this.patientsBtn.Click += new System.EventHandler(this.patientsBtn_Click);
+            // 
+            // staffBtn
+            // 
+            this.staffBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffBtn.FlatAppearance.BorderSize = 2;
+            this.staffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffBtn.Image = global::HMS.Properties.Resources.staff;
+            this.staffBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.staffBtn.Location = new System.Drawing.Point(232, 3);
+            this.staffBtn.Name = "staffBtn";
+            this.staffBtn.Size = new System.Drawing.Size(223, 149);
+            this.staffBtn.TabIndex = 1;
+            this.staffBtn.Text = "Staff";
+            this.staffBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.staffBtn.UseVisualStyleBackColor = true;
+            this.staffBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // roleBtn
+            // 
+            this.roleBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roleBtn.FlatAppearance.BorderSize = 2;
+            this.roleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roleBtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleBtn.Image = global::HMS.Properties.Resources.roles;
+            this.roleBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.roleBtn.Location = new System.Drawing.Point(3, 3);
+            this.roleBtn.Name = "roleBtn";
+            this.roleBtn.Size = new System.Drawing.Size(223, 149);
+            this.roleBtn.TabIndex = 16;
+            this.roleBtn.Text = "Roles";
+            this.roleBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.roleBtn.UseVisualStyleBackColor = true;
+            this.roleBtn.Click += new System.EventHandler(this.roleBtn_Click_2);
+            // 
             // AdminHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 688);
             this.Name = "AdminHomeScreen";
-            this.Text = "Home";
+            this.Text = "Administrator";
             this.Load += new System.EventHandler(this.AdminHomeScreen_Load);
             this.left_panel.ResumeLayout(false);
             this.backBtnPanel.ResumeLayout(false);
@@ -298,16 +298,16 @@ namespace HMS
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button testBtn;
-        private System.Windows.Forms.Button checkupBtn;
-        private System.Windows.Forms.Button turnScreenBtn;
-        private System.Windows.Forms.Button symptomBtn;
-        private System.Windows.Forms.Button diseaseBtn;
-        private System.Windows.Forms.Button patientsBtn;
-        private System.Windows.Forms.Button medicineBtn;
-        private System.Windows.Forms.Button staffBtn;
-        private System.Windows.Forms.Button roleBtn;
-        private System.Windows.Forms.Button reportBtn;
+        protected System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        protected System.Windows.Forms.Button testBtn;
+        protected System.Windows.Forms.Button checkupBtn;
+        protected System.Windows.Forms.Button turnScreenBtn;
+        protected System.Windows.Forms.Button symptomBtn;
+        protected System.Windows.Forms.Button diseaseBtn;
+        protected System.Windows.Forms.Button medicineBtn;
+        protected System.Windows.Forms.Button reportBtn;
+        protected System.Windows.Forms.Button staffBtn;
+        protected System.Windows.Forms.Button roleBtn;
+        protected System.Windows.Forms.Button patientsBtn;
     }
 }

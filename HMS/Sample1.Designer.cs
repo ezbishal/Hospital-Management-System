@@ -44,7 +44,7 @@
             // 
             // left_panel
             // 
-            this.left_panel.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.left_panel.BackColor = System.Drawing.Color.SteelBlue;
             this.left_panel.Controls.Add(this.leftPanel);
             this.left_panel.Controls.Add(this.backBtnPanel);
             this.left_panel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -115,7 +115,7 @@
             this.right_panel.Controls.Add(this.rightPanel);
             this.right_panel.Controls.Add(this.usernamePanel);
             this.right_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.right_panel.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.right_panel.ForeColor = System.Drawing.Color.SteelBlue;
             this.right_panel.Location = new System.Drawing.Point(369, 0);
             this.right_panel.Name = "right_panel";
             this.right_panel.Size = new System.Drawing.Size(806, 745);

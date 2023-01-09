@@ -109,7 +109,7 @@ namespace HMS
 
         public static int turnNo;
         public static string patientName;
-        Int64 patientAppID = 0;
+         Int64 patientAppID = 0;
         public void getLastCheckupDetails(Int16 status, Int64 patientID)
         {
             try
@@ -174,13 +174,16 @@ namespace HMS
             ht.Add("@patID", Convert.ToInt64(patientDD.SelectedValue.ToString()));
             turnNo = crud.getTurnNumber("st_getTurnNumberWRTpatientWRTToday", ht);
             getPatientInfo();
+            getLastCheckupDetails(1, Convert.ToInt64(patientDD.SelectedValue.ToString()));
             getLastMedicine(lastMedicineInternalLB, patientAppID, 0);
             getLastMedicine(lastMedicineExternalLB, patientAppID, 1);
             getLastDetails("st_getLastTests", lastTestsLB, "@appID", patientAppID, "Test", "ID");
-            getLastDetails("st_getLastTests", lastSymptomsLB, "@appID", patientAppID, "Symptom", "ID");
-            getLastDetails("st_getLastTests", lastDiseasesLB, "@appID", patientAppID, "Disease", "ID");
-            getLastCheckupDetails(1, Convert.ToInt64(patientDD.SelectedValue.ToString()));
+            getLastDetails("st_getLastSymptoms", lastSymptomsLB, "@appID", patientAppID, "Symptom", "ID");
+            getLastDetails("st_getLastDisease", lastDiseasesLB, "@appID", patientAppID, "Disease", "ID");
             getLastRemarks();
+
+            TurnWindow tw = new TurnWindow();
+            tw.Show();
         }
 
         private int getDiseaseID(string name)
@@ -354,7 +357,7 @@ namespace HMS
 
             if (internalDD.Text != "")
             {
-                if(!mRB.Checked && !anbsRB.Checked && !meRB.Checked && !oadRB.Checked && !bmRB.Checked)
+                if(!mRB.Checked && !anbsRB.Checked && !meRB.Checked && !oadRB.Checked && !bmRB.Checked && !otherRB.Checked)
                 {
                     MainClass.showMessage("Please select dosage of this medicine.", "error");
                 }
@@ -374,7 +377,7 @@ namespace HMS
                             internalLB.Items.Add(internalDD.Text + "-" + anbsRB.Text);
 
                         }
-                        else if (!meRB.Checked)
+                        else if (meRB.Checked)
                         {
                             htInternal.Add(internalDD.Text, 2);
                             internalLB.Items.Add(internalDD.Text + "-" + meRB.Text);
@@ -417,7 +420,7 @@ namespace HMS
         {
             if (externalDD.Text != "")
             {
-                if (!m2RB.Checked && !anbs2RB.Checked && !me2RB.Checked && !oad2RB.Checked && !bm2RB.Checked)
+                if (!m2RB.Checked && !anbs2RB.Checked && !me2RB.Checked && !oad2RB.Checked && !bm2RB.Checked && !other2RB.Checked)
                 {
                     MainClass.showMessage("Please select dosage of this medicine.", "error");
                 }
@@ -513,10 +516,10 @@ namespace HMS
             if (internalLB.SelectedItems.Count > 0)
             {
                 char[] delim = { '-' };
-                string[] arr = internalLB.SelectedItems.ToString().Split(delim);
+                string[] arr = internalLB.SelectedItem.ToString().Split(delim);
                 htInternal.Remove(arr[0]);
 
-                internalLB.Items.Remove(internalLB.SelectedItems);
+                internalLB.Items.Remove(internalLB.SelectedItem);
 
             }
         }
@@ -526,10 +529,10 @@ namespace HMS
             if (externalLB.SelectedItems.Count > 0)
             {
                 char[] delim = { '-' };
-                string[] arr = externalLB.SelectedItems.ToString().Split(delim);
+                string[] arr = externalLB.SelectedItem.ToString().Split(delim);
                 htExternal.Remove(arr[0]);
 
-                externalLB.Items.Remove(externalLB.SelectedItems);
+                externalLB.Items.Remove(externalLB.SelectedItem);
 
             }
         }
@@ -823,10 +826,14 @@ namespace HMS
 
                 crud.insert_update_delete("st_updatePatientStatus", htStatus);
 
-                MainClass.showMessage("Patient checkup successful!", "Success");
-                MainClass.resetEnable(tableLayoutPanel2);
-                MainClass.resetEnable(groupBox1);
-                MainClass.resetDisable(leftPanel);
+                DialogResult result = MessageBox.Show("Patient checkup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                    {
+                        this.Close();
+                        CheckUpWindow cw = new CheckUpWindow();
+                        MainClass.showWindow(cw, this, MDI.ActiveForm);
+                    }
+                
                 sc.Complete();
             }
         }
@@ -893,6 +900,18 @@ namespace HMS
         private void label23_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void other2RB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (other2RB.Checked)
+            {
+                other2Txt.Enabled = true;
+            }
+            else
+            {
+                other2Txt.Enabled = false;
+            }
         }
     }
 }

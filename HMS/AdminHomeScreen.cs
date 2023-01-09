@@ -96,7 +96,7 @@ namespace HMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Payments p = new Payments();
+            Payment p = new Payment();
             MainClass.showWindow(p, this, MDI.ActiveForm);
         }
 

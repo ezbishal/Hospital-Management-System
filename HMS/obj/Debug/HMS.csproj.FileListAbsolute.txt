@@ -6,7 +6,6 @@ C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.MDI.resources
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.MedicineWindow.resources
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.PatientRegistration.resources
-C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.Payments.resources
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.RoleWindow.resources
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.Sample1.resources
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.Properties.Resources.resources
@@ -111,3 +110,5 @@ C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\bin\Debug\zh-C
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.csproj.CopyComplete
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.exe
 C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.pdb
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.Payment.resources
+C:\Users\ezbis\OneDrive - University of Greenwich\Desktop\HMS\HMS\obj\Debug\HMS.Report.resources

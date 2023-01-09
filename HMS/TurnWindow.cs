@@ -20,17 +20,13 @@ namespace HMS
         int ticks = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ticks++;
-            if (ticks == 60)
-            {
-                ticks= 0;
-                turnLabel.Text = CheckUpWindow.turnNo.ToString();
-            }
         }
 
         private void TurnWindow_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            turnLabel.Text = CheckUpWindow.turnNo.ToString();
+
         }
 
         private void TurnWindow_FormClosing(object sender, FormClosingEventArgs e)

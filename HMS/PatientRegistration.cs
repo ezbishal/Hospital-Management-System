@@ -42,6 +42,9 @@ namespace HMS
             crud.loadData("st_getPatientAppointmentRegistration", dataGridView1, loadDa);
         }
 
+        Int64 patID;
+        Int64 appointmentID;
+
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -102,8 +105,7 @@ namespace HMS
         }
 
 
-        Int64 patID;
-        Int64 appointmentID;
+        
         public override void saveBtn_Click(object sender, EventArgs e)
         {
             using (TransactionScope sc = new TransactionScope())
@@ -122,20 +124,12 @@ namespace HMS
 
                     if (edit == 0) // Code for save
                     {
-                        Hashtable ht = new Hashtable();
-                        ht.Add("@name", patientTxt.Text);
-                        ht.Add("@guard", guardianTxt.Text);
-                        ht.Add("@phone", phoneTxt.Text);
-                        ht.Add("@age", ageTxt.Text);
-
-                        if (crud.insert_update_delete("st_insertPatientReg", ht) > 0)
+                        if (get_checkPatientRecord(phoneTxt.Text))
                         {
-                            Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
-
                             Hashtable htt = new Hashtable();
                             htt.Add("@date", apptDT.Value.ToString("dd-MMM-yyyy hh:mm tt"));
                             htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
-                            htt.Add("@patientID", patientID);
+                            htt.Add("@patientID", patID);
                             htt.Add("@status", 0);
                             htt.Add("@day", apptDT.Value.Day);
                             htt.Add("@month", apptDT.Value.Month);
@@ -149,12 +143,43 @@ namespace HMS
                                 TokenReportForm tt = new TokenReportForm();
                                 tt.Show();
                             }
-
-
                         }
                         else
                         {
-                            MainClass.showMessage("Unable to save record.", "error");
+                            Hashtable ht = new Hashtable();
+                            ht.Add("@name", patientTxt.Text);
+                            ht.Add("@guard", guardianTxt.Text);
+                            ht.Add("@phone", phoneTxt.Text);
+                            ht.Add("@age", ageTxt.Text);
+
+                            if (crud.insert_update_delete("st_insertPatientReg", ht) > 0)
+                            {
+                                Int64 patientID = Convert.ToInt64(crud.getLastID("st_getLastPatientID"));
+
+                                Hashtable htt = new Hashtable();
+                                htt.Add("@date", apptDT.Value.ToString("dd-MMM-yyyy hh:mm tt"));
+                                htt.Add("@doctorID", Convert.ToInt32(apptForDD.SelectedValue.ToString()));
+                                htt.Add("@patientID", patientID);
+                                htt.Add("@status", 0);
+                                htt.Add("@day", apptDT.Value.Day);
+                                htt.Add("@month", apptDT.Value.Month);
+                                htt.Add("@year", apptDT.Value.Year);
+
+                                if (crud.insert_update_delete("st_insertAppointment", htt) > 0)
+                                {
+                                    MainClass.showMessage(patientTxt.Text + " added successfully!", "success");
+                                    MainClass.resetDisable(leftPanel);
+                                    loadPatients();
+                                    TokenReportForm tt = new TokenReportForm();
+                                    tt.Show();
+                                }
+
+
+                            }
+                            else
+                            {
+                                MainClass.showMessage("Unable to save record.", "error");
+                            }
                         }
                     }
                     else if (edit == 1) //Code for update
@@ -302,11 +327,9 @@ namespace HMS
             {
                 if (get_checkPatientRecord(phoneTxt.Text))
                 {
-                 
                 }
                 else
                 {
-
                 }
             }
         }

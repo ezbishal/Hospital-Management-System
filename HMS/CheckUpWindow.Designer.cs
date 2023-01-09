@@ -499,7 +499,7 @@
             // callBtn
             // 
             this.callBtn.BackColor = System.Drawing.Color.White;
-            this.callBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.callBtn.ForeColor = System.Drawing.Color.SteelBlue;
             this.callBtn.Location = new System.Drawing.Point(7, 194);
             this.callBtn.Name = "callBtn";
             this.callBtn.Size = new System.Drawing.Size(339, 41);
@@ -817,6 +817,7 @@
             // glucoseTxt
             // 
             this.glucoseTxt.Location = new System.Drawing.Point(17, 194);
+            this.glucoseTxt.MaxLength = 3;
             this.glucoseTxt.Name = "glucoseTxt";
             this.glucoseTxt.Size = new System.Drawing.Size(303, 27);
             this.glucoseTxt.TabIndex = 13;
@@ -827,6 +828,7 @@
             // pulseTxt
             // 
             this.pulseTxt.Location = new System.Drawing.Point(17, 53);
+            this.pulseTxt.MaxLength = 3;
             this.pulseTxt.Name = "pulseTxt";
             this.pulseTxt.Size = new System.Drawing.Size(303, 27);
             this.pulseTxt.TabIndex = 12;
@@ -837,6 +839,7 @@
             // tempTxt
             // 
             this.tempTxt.Location = new System.Drawing.Point(17, 123);
+            this.tempTxt.MaxLength = 3;
             this.tempTxt.Name = "tempTxt";
             this.tempTxt.Size = new System.Drawing.Size(303, 27);
             this.tempTxt.TabIndex = 11;
@@ -968,6 +971,7 @@
             this.other2RB.TabStop = true;
             this.other2RB.Text = "Other";
             this.other2RB.UseVisualStyleBackColor = true;
+            this.other2RB.CheckedChanged += new System.EventHandler(this.other2RB_CheckedChanged);
             // 
             // oad2RB
             // 
